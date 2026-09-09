@@ -5,175 +5,376 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    background: white;
+html {
+    scroll-behavior: smooth;
 }
 
-/* encabezado= emmanuel */
+body {
+    min-height: 100vh;
+    background: #F3E7D3;
+    color: #3B271A;
+
+    /* Evita que cualquier elemento genere desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ENCABEZADO = EMMANUEL
+   ========================================================= */
 
 header {
     position: sticky;
     top: 0;
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background: linear-gradient(90deg, #057e8b, #fcfffc);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, .18);
+
+    /*
+       Un poco menos de espacio lateral para que
+       TODO pueda entrar correctamente al 100%.
+    */
+    padding: 12px 35px;
+
+    /*
+       Café + oliva + terracota + beige.
+       Más contraste que la versión anterior.
+    */
+    background:
+        linear-gradient(
+            100deg,
+            #3B271A 0%,
+            #51452F 32%,
+            #7A8F6A 68%,
+            #E9D6B7 100%
+        );
+
+    box-shadow:
+        0 4px 15px rgba(59, 39, 26, .38);
+
     z-index: 1000;
 }
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+
+    /*
+       Evita que el logo se comprima.
+    */
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 110px;
-    height: 115px;
+    width: 105px;
+    height: 110px;
+
     border-radius: 50%;
-    background: white;
+
+    background: #F3E7D3;
+
+    border: 3px solid #E9D6B7;
+
+    box-shadow:
+        0 3px 10px rgba(59, 39, 26, .35);
 }
 
 .logo h1 {
-    color: #003366;
-    font-size: 34px;
+    color: #F3E7D3;
+
+    font-size: 32px;
+
+    /*
+       Pequeño contraste para que el nombre
+       resalte sobre el café.
+    */
+    text-shadow:
+        1px 2px 3px rgba(59, 39, 26, .45);
 }
 
 .logo p {
-    color: white;
+    color: #E9D6B7;
+
     font-size: 14px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+nav {
+    flex-shrink: 1;
 }
 
 nav ul {
     display: flex;
+
     list-style: none;
-    gap: 25px;
+
+    /*
+       Antes eran 25px.
+       Bajamos ligeramente para evitar
+       que el lado derecho se corte.
+    */
+    gap: 18px;
+
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #083b59;
+
+    color: #3B271A;
+
     font-weight: bold;
-    transition: .3s;
+
+    font-size: 15px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
 }
 
 nav a:hover {
-    color: rgb(252, 255, 252);
+    color: #C55A2E;
+
+    transform: translateY(-2px);
 }
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
 
 .botones {
     display: flex;
-    gap: 15px;
+
+    gap: 10px;
+
+    flex-shrink: 0;
 }
 
 .btn {
     text-decoration: none;
-    color: white;
-    padding: 12px 22px;
+
+    color: #F3E7D3;
+
+    padding: 11px 18px;
+
     border-radius: 30px;
+
     font-weight: bold;
-    transition: .3s;
+
+    font-size: 14px;
+
+    transition:
+        .3s;
+
+    white-space: nowrap;
 }
 
+
+/* ---------------------------------------------------------
+   ECO TOUR
+   --------------------------------------------------------- */
+
 .eco {
-    background: #2e7d32;
+    background: #7A8F6A;
+
+    box-shadow:
+        0 3px 8px rgba(59, 39, 26, .20);
 }
 
 .eco:hover {
-    background: #1b5e20;
+    background: #3B271A;
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 14px rgba(59, 39, 26, .30);
 }
 
+
+/* ---------------------------------------------------------
+   GAME TOUR
+   --------------------------------------------------------- */
+
 .game {
-    background: #283593;
+    background: #C55A2E;
+
+    box-shadow:
+        0 3px 8px rgba(59, 39, 26, .20);
 }
 
 .game:hover {
-    background: #1a237e;
+    background: #3B271A;
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 14px rgba(59, 39, 26, .30);
 }
 
-/* body-inicio= Mateo */
+
+/* =========================================================
+   BODY - INICIO = MATEO
+   ========================================================= */
 
 #divinicio {
-    background: white;
+    background: #F3E7D3;
+
     width: 100%;
+
     height: 1000px;
 }
 
+
 .carrusel {
     position: relative;
+
     width: 100%;
+
     height: 100vh;
+
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .7);
+
+    box-shadow:
+        0 0 30px rgba(59, 39, 26, .55);
 }
+
 
 .imgcarrusel {
     display: flex;
+
     width: 500%;
+
     height: 100%;
+
     animation: galeria 25s infinite;
 }
 
+
 .imgcarrusel img {
     width: 20%;
+
     height: 100%;
+
     object-fit: cover;
 }
 
+
+/* =========================================================
+   CAPA SOBRE LAS IMÁGENES
+   ========================================================= */
+
 .carrusel::after {
     content: "";
+
     position: absolute;
+
     inset: 0;
+
     pointer-events: none;
+
     background:
+
+        /* Laterales */
         linear-gradient(
             to right,
-            rgba(0, 0, 0, .45) 0%,
+            rgba(59, 39, 26, .48) 0%,
             transparent 15%,
             transparent 85%,
-            rgba(0, 0, 0, .45) 100%
+            rgba(59, 39, 26, .48) 100%
         ),
+
+        /* Parte superior e inferior */
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, .45) 0%,
-            transparent 20%,
-            transparent 80%,
-            rgba(0, 0, 0, .45) 100%
+            rgba(59, 39, 26, .35) 0%,
+            transparent 18%,
+            transparent 78%,
+            rgba(59, 39, 26, .55) 100%
         );
+
     z-index: 1;
 }
 
+
+/* =========================================================
+   TEXTO DEL CARRUSEL
+   ========================================================= */
+
 .texto {
     position: absolute;
+
     top: 50%;
+
     left: 50%;
+
     transform: translate(-50%, -50%);
-    color: white;
+
+    color: #F3E7D3;
+
     text-align: center;
+
     z-index: 2;
+
+    /*
+       Sombra café en lugar de negro puro.
+       Se integra mucho mejor con la paleta.
+    */
     text-shadow:
-        2px 2px 5px black,
-        -2px -2px 5px black,
-        2px -2px 5px black,
-        -2px 2px 5px black;
+
+        2px 2px 5px #3B271A,
+
+        -2px -2px 5px #3B271A,
+
+        2px -2px 5px #3B271A,
+
+        -2px 2px 5px #3B271A;
 }
+
 
 .texto h1 {
     font-size: 50px;
+
     margin-bottom: 15px;
+
+    /*
+       Un pequeño borde visual mediante sombra.
+    */
+    text-shadow:
+
+        3px 3px 6px #3B271A,
+
+        0 0 10px rgba(243, 231, 211, .25);
 }
+
 
 .texto p {
     font-size: 22px;
+
+    color: #F3E7D3;
 }
 
+
+/* =========================================================
+   ANIMACIÓN DEL CARRUSEL
+   ========================================================= */
+
 @keyframes galeria {
+
     0%, 16% {
         transform: translateX(0);
     }
@@ -199,225 +400,604 @@ nav a:hover {
     }
 }
 
-/* footer= juan jose */
+
+/* =========================================================
+   FOOTER = JUAN JOSE
+   ========================================================= */
 
 :root {
-    --color-cafe-intenso: #382417;
-    --color-caramelo: #6d3c1c;
-    --color-miel: #c57938;
-    --color-vainilla: #e7c196;
-    --color-primary: #b9a89a;
-    --color-text: var(--color-vainilla);
-    --color-bg: rgb(56 36 23 / 78%);
-    --color-border: rgb(231 193 150 / 12%);
+
+    --color-cafe-intenso: #3B271A;
+
+    --color-caramelo: #B98B5E;
+
+    --color-miel: #C55A2E;
+
+    --color-vainilla: #E9D6B7;
+
+    --color-oliva: #7A8F6A;
+
+    --color-primary: #F3E7D3;
+
+    --color-text: #F3E7D3;
+
+    --color-bg: rgba(59, 39, 26, .96);
+
+    --color-border: rgba(233, 214, 183, .28);
 }
+
 
 #contacto {
     margin-top: 300px;
-    background: white;
+
+    background: #F3E7D3;
 }
 
+
 footer {
+
     position: sticky;
+
     bottom: 0;
-    width: calc(100% - 96px);
+
+    /*
+       100% - 100px
+       + 50px izquierda
+       + 50px derecha
+       = 100%
+
+       Así no genera desbordamiento.
+    */
+    width: calc(100% - 100px);
+
     margin-left: 50px;
+
     margin-right: 50px;
+
     margin-bottom: 50px;
+
     padding: 48px;
+
     border-radius: 32px;
-    background: var(--color-bg);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(59, 39, 26, .97),
+            rgba(81, 61, 42, .95)
+        );
+
     border: 1px solid var(--color-border);
+
     backdrop-filter: blur(20px);
+
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 20px 60px rgb(0 0 0 / 35%);
+
+    box-shadow:
+        0 20px 60px rgba(59, 39, 26, .40);
 }
+
 
 .top,
 .bottom {
     display: flex;
+
     gap: 48px;
 }
 
+
 .top {
     margin-bottom: 24px;
+
     justify-content: space-between;
 }
 
+
 .bottom {
     padding: 32px 0 0;
+
     align-items: center;
+
     justify-content: space-between;
+
     border-top: 1px solid var(--color-border);
 }
+
 
 .top .left,
 .top .right {
     flex: 1 1 50%;
 }
 
+
 .bottom .left {
     flex: 1 1 auto;
 }
 
+
+/* =========================================================
+   TÍTULOS FOOTER
+   ========================================================= */
+
 footer h2 {
+
     margin: 0 0 12px;
+
     font-size: 13px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
+
     font-weight: 600;
-    color: var(--color-primary);
+
+    color: #E9D6B7;
 }
 
+
 footer p {
-    color: var(--color-primary);
+
+    color: #E9D6B7;
+
     font-size: 14px;
+
     margin: 0;
 }
+
 
 .top .left h2 + #titu {
     margin-top: 0;
 }
 
+
 #titu {
+
     padding: 0 24px 0 0;
+
     margin: 0 0 24px;
+
     font-size: 26px;
+
     font-weight: 600;
-    color: var(--color-text);
+
+    color: #F3E7D3;
 }
+
+
+/* =========================================================
+   BOTÓN FOOTER
+   ========================================================= */
 
 button {
-    background: var(--color-vainilla);
-    color: var(--color-cafe-intenso);
+
+    background: #E9D6B7;
+
+    color: #3B271A;
+
     display: inline-flex;
+
     gap: 10px;
+
     align-items: center;
+
     border: 0;
+
     border-radius: 40px;
+
     padding: 14px 26px 14px 28px;
+
     font-size: 15px;
+
     font-weight: 600;
+
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
+
 button:hover {
-    background: var(--color-miel);
+
+    background: #C55A2E;
+
+    color: #F3E7D3;
+
     transform: translateY(-2px);
 }
+
 
 button .material-icons {
     font-size: 18px;
 }
 
+
+/* =========================================================
+   LINKS FOOTER
+   ========================================================= */
+
 .links {
+
     display: flex;
+
     gap: 64px;
 }
 
+
 footer ul {
+
     list-style: none;
+
     padding: 0;
+
     margin: 0;
 }
 
+
 footer ul li {
+
     display: flex;
+
     flex-direction: column;
 }
 
+
 footer ul li a {
+
     margin: 0 0 14px;
-    color: var(--color-text);
+
+    color: #F3E7D3;
+
     text-decoration: none;
+
     font-size: 15px;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
 }
+
 
 footer ul li a:last-child {
     margin-bottom: 0;
 }
 
+
 footer ul li a:hover {
-    color: var(--color-miel);
+
+    color: #C55A2E;
+
+    transform: translateX(3px);
 }
 
+
+/* =========================================================
+   REDES SOCIALES
+   ========================================================= */
+
 .socials {
+
     display: flex;
+
     gap: 16px;
 }
 
+
 .socials a {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 36px;
+
     height: 36px;
+
     border-radius: 50%;
-    background: var(--color-border);
-    color: var(--color-text);
+
+    background: rgba(233, 214, 183, .18);
+
+    color: #F3E7D3;
+
     font-size: 15px;
+
     text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
 }
+
 
 .socials a:hover {
-    background: var(--color-miel);
-    color: var(--color-cafe-intenso);
+
+    background: #C55A2E;
+
+    color: #3B271A;
+
+    transform: translateY(-3px);
 }
 
+
+/* =========================================================
+   AJUSTE PARA PANTALLAS COMO 1366x768
+   ========================================================= */
+
+/*
+   ESTA ES UNA DE LAS PARTES MÁS IMPORTANTES.
+
+   En tu captura estás trabajando aproximadamente
+   con 1366px de ancho.
+
+   El problema era que:
+   logo + navegación + botones
+   ocupaban más espacio del disponible.
+
+   Reducimos SOLO espacios y tamaños,
+   sin eliminar ningún elemento.
+*/
+
+@media (width <= 1400px) {
+
+    header {
+
+        padding-left: 28px;
+
+        padding-right: 20px;
+
+        gap: 12px;
+    }
+
+
+    .logo {
+
+        gap: 9px;
+    }
+
+
+    .logo img {
+
+        width: 95px;
+
+        height: 100px;
+    }
+
+
+    .logo h1 {
+
+        font-size: 29px;
+    }
+
+
+    .logo p {
+
+        font-size: 13px;
+    }
+
+
+    nav ul {
+
+        gap: 14px;
+    }
+
+
+    nav a {
+
+        font-size: 14px;
+    }
+
+
+    .botones {
+
+        gap: 8px;
+    }
+
+
+    .btn {
+
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (width <= 1100px) {
+
+    header {
+
+        padding: 12px 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .logo {
+
+        width: auto;
+
+        justify-content: center;
+    }
+
+
+    nav ul {
+
+        gap: 13px;
+
+        justify-content: center;
+    }
+
+
+    .botones {
+
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (width <= 900px) {
+
+    header {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .logo {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    nav {
+
+        width: 100%;
+    }
+
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .botones {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   750px
+   ========================================================= */
+
 @media (width <= 750px) {
+
     footer {
+
         width: calc(100% - 48px);
+
         margin: 0 24px;
+
         padding: 32px;
     }
 
+
     .top {
+
         flex-direction: column;
+
         gap: 32px;
     }
 
+
     #titu {
+
         padding-right: 0;
     }
 
+
     .links {
+
         gap: 32px;
     }
 }
 
+
+/* =========================================================
+   630px
+   ========================================================= */
+
 @media (width <= 630px) {
+
     .bottom {
+
         flex-direction: column-reverse;
+
         gap: 16px;
     }
 
+
     .links {
+
         flex-direction: column;
+
         gap: 24px;
+
         padding-left: 0;
+
         padding-right: 0;
+
         text-align: center;
     }
 
+
     footer ul li a {
+
         margin-bottom: 10px;
     }
 
+
     .top .left {
+
         text-align: center;
+
         align-items: center;
+
         display: flex;
+
         flex-direction: column;
     }
 
+
     #titu {
+
         padding-left: 4vw;
+
         padding-right: 4vw;
     }
 
+
     footer p {
+
         text-align: center;
+    }
+
+
+    .texto h1 {
+
+        font-size: 36px;
+    }
+
+
+    .texto p {
+
+        font-size: 18px;
     }
 }
