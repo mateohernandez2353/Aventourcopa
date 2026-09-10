@@ -626,23 +626,6 @@ button:hover {
 }
 
 
-button .material-icons {
-    font-size: 18px;
-}
-
-
-/* =========================================================
-   LINKS FOOTER
-   ========================================================= */
-
-.links {
-
-    display: flex;
-
-    gap: 64px;
-}
-
-
 footer ul {
 
     list-style: none;
@@ -938,12 +921,6 @@ footer ul li a:hover {
 
         padding-right: 0;
     }
-
-
-    .links {
-
-        gap: 32px;
-    }
 }
 
 
@@ -958,20 +935,6 @@ footer ul li a:hover {
         flex-direction: column-reverse;
 
         gap: 16px;
-    }
-
-
-    .links {
-
-        flex-direction: column;
-
-        gap: 24px;
-
-        padding-left: 0;
-
-        padding-right: 0;
-
-        text-align: center;
     }
 
 
