@@ -318,7 +318,7 @@ nav a:hover {
 .texto {
     position: absolute;
 
-    top: 50%;
+    top: 40%;
 
     left: 50%;
 
@@ -999,5 +999,786 @@ footer ul li a:hover {
     .texto p {
 
         font-size: 18px;
+    }
+}
+
+
+/* =====================================================================
+   SECCIÓN ECOTOUR
+   Añadido sin tocar ninguna regla existente del archivo.
+   Paleta propia (musgo, helecho, agua de quebrada, arcilla) para que
+   se lea como la "cara ambiental" de Aventourcopa, distinta del
+   café/terracota del resto del sitio.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap');
+
+:root {
+    --eco-musgo-profundo: #1F3B2C;
+    --eco-helecho:        #3E6B4F;
+    --eco-agua-quebrada:  #4C7E8C;
+    --eco-hoja-tierra:    #8A9B6E;
+    --eco-lino:           #EEF0E4;
+    --eco-corteza:        #22301F;
+    --eco-miel:           #C08A2E;
+    --eco-barro:          #A65A3C;
+    --eco-arena:          #DCE3CD;
+}
+
+/* Interruptor invisible (checkbox hack: abre/cierra sin JavaScript) */
+.ecotour-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Página EcoTour, oculta por defecto */
+.ecotour-page {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    overflow-y: auto;
+
+    background: var(--eco-lino);
+    color: var(--eco-corteza);
+}
+
+#ecotour-toggle:checked ~ .ecotour-page {
+    display: block;
+}
+
+.eco-scroll {
+    min-height: 100%;
+}
+
+.ecotour-page * {
+    box-sizing: border-box;
+}
+
+.ecotour-page h1,
+.ecotour-page h2,
+.ecotour-page h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: .2px;
+}
+
+.ecotour-page p,
+.ecotour-page li,
+.ecotour-page td,
+.ecotour-page th,
+.ecotour-page summary {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.55;
+}
+
+/* Botón "Cerrar": fijo respecto a la ventana, siempre visible y en la misma
+   esquina sin importar el punto de scroll dentro de EcoTour. */
+.eco-cerrar {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    background: var(--eco-musgo-profundo);
+    color: var(--eco-lino);
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(31, 59, 44, .35);
+
+    z-index: 2100;
+
+    transition: background .25s ease, transform .25s ease;
+}
+
+.eco-cerrar:hover {
+    background: var(--eco-barro);
+    transform: translateY(-2px);
+}
+
+/* La segunda aparición (al pie) vuelve a ser un botón normal dentro del flujo,
+   no fijo, y centrado gracias al text-align del contenedor. */
+.eco-cerrar--pie {
+    position: static;
+    display: inline-flex;
+    margin: 24px 0 0;
+}
+
+/* HERO — tratamiento de infografía: título a la izquierda, cifras clave a
+   la derecha, y una silueta de montaña/río de fondo como único elemento
+   decorativo fuerte de toda la sección. */
+.eco-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 64px 8vw 0;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(138, 155, 110, .35), transparent 55%),
+        linear-gradient(160deg, var(--eco-musgo-profundo) 0%, #274734 60%, var(--eco-helecho) 100%);
+
+    color: var(--eco-lino);
+}
+
+.eco-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 190px;
+
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 130% auto;
+
+    opacity: .5;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 260' preserveAspectRatio='none'><path d='M0 260 L0 190 L140 70 L230 150 L330 40 L460 170 L560 90 L680 200 L780 60 L900 180 L1010 100 L1130 210 L1260 80 L1440 190 L1440 260 Z' fill='%23234432'/><path d='M0 260 L0 230 Q 180 200 360 232 T 720 226 T 1080 232 T 1440 224 L1440 260 Z' fill='%233E6B4F' fill-opacity='0.55'/></svg>");
+}
+
+.eco-hero-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: end;
+
+    padding-bottom: 64px;
+}
+
+.eco-kicker {
+    margin: 0 0 10px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    color: var(--eco-arena);
+}
+
+.eco-hero h1 {
+    max-width: 14ch;
+    margin: 0 0 18px;
+    font-size: clamp(32px, 4.2vw, 52px);
+    line-height: 1.12;
+    color: #fff;
+}
+
+.eco-hero-sub {
+    max-width: 56ch;
+    font-size: 17px;
+    color: var(--eco-arena);
+}
+
+/* Cifras destacadas del hero, tipo tarjeta de infografía */
+.eco-hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.eco-hero-stats li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 18px;
+
+    background: rgba(238, 240, 228, .1);
+    border: 1px solid rgba(238, 240, 228, .18);
+    border-radius: 10px;
+
+    backdrop-filter: blur(2px);
+}
+
+.eco-hero-stats i {
+    flex: 0 0 auto;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(220, 227, 205, .18);
+    color: var(--eco-arena);
+    font-size: 16px;
+}
+
+.eco-hero-stats strong {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.eco-hero-stats span {
+    display: block;
+    font-size: 12.5px;
+    color: var(--eco-arena);
+}
+
+/* BARRA DE NAVEGACIÓN FIJA — leyenda de mapa: cada tema tiene su propio
+   ícono y color de acento, igual que una leyenda de infografía. */
+.eco-quicknav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding: 14px 8vw;
+    padding-right: calc(8vw + 130px);
+
+    background: var(--eco-musgo-profundo);
+    border-bottom: 1px solid rgba(238, 240, 228, .15);
+}
+
+.eco-quicknav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px 8px 12px;
+
+    background: rgba(238, 240, 228, .08);
+    border: 1px solid rgba(238, 240, 228, .16);
+    border-radius: 30px;
+
+    color: var(--eco-arena);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: bold;
+
+    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.eco-quicknav a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    color: var(--eco-musgo-profundo);
+    background: var(--eco-q-color, var(--eco-arena));
+}
+
+.eco-quicknav a:hover {
+    background: rgba(238, 240, 228, .16);
+    border-color: rgba(238, 240, 228, .4);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.eco-q-agua       { --eco-q-color: #8FC6D6; }
+.eco-q-rutas      { --eco-q-color: #C9A24B; }
+.eco-q-bio        { --eco-q-color: #9CB37E; }
+.eco-q-movilidad  { --eco-q-color: #7FB0A6; }
+.eco-q-residuos   { --eco-q-color: #D6B36B; }
+.eco-q-seguridad  { --eco-q-color: #D08B6B; }
+
+/* LEYENDA DE ESTADOS */
+.eco-leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+
+    padding: 22px 8vw;
+
+    background: var(--eco-arena);
+    border-bottom: 1px solid rgba(34, 48, 31, .12);
+}
+
+.eco-leyenda p {
+    flex: 1 1 320px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--eco-corteza);
+}
+
+.eco-leyenda p:first-child {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Número de secuencia de cada bloque (01–06): la sección sí es un recorrido
+   guiado — territorio, rutas, biodiversidad, movilidad, residuos, seguridad —
+   así que la numeración aporta orientación real, no decoración. */
+.eco-block-num {
+    margin: 0 0 6px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 15px;
+    color: var(--eco-hoja-tierra);
+}
+
+/* Insignias de estado, reutilizadas en toda la sección */
+.eco-badge {
+    display: inline-block;
+    padding: 5px 12px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.eco-badge--confirmado {
+    background: rgba(62, 107, 79, .16);
+    color: var(--eco-helecho);
+}
+
+.eco-badge--actualizar {
+    background: rgba(192, 138, 46, .18);
+    color: var(--eco-miel);
+}
+
+.eco-badge--validar {
+    background: rgba(166, 90, 60, .16);
+    color: var(--eco-barro);
+}
+
+/* BLOQUES GENERALES */
+.eco-block {
+    padding: 64px 8vw;
+}
+
+.eco-block--musgo {
+    background: var(--eco-lino);
+}
+
+.eco-block--lino {
+    background: #fff;
+}
+
+.eco-block h2 {
+    margin: 0 0 26px;
+    font-size: clamp(24px, 2.6vw, 32px);
+    color: var(--eco-musgo-profundo);
+}
+
+.eco-block-intro {
+    max-width: 62ch;
+    margin: -10px 0 28px;
+    color: #4B5A47;
+}
+
+.eco-grid-2 {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.eco-texto p {
+    max-width: 68ch;
+    margin: 0 0 16px;
+}
+
+/* Lista de datos territoriales */
+.eco-stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.eco-stat-list li {
+    padding: 16px 18px;
+
+    background: var(--eco-arena);
+    border-left: 4px solid var(--eco-helecho);
+    border-radius: 6px;
+}
+
+.eco-stat-list strong {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 21px;
+    color: var(--eco-musgo-profundo);
+}
+
+.eco-stat-list span {
+    font-size: 13px;
+    color: #526049;
+}
+
+/* Tarjetas de rutas */
+.eco-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.eco-card {
+    padding: 22px;
+
+    background: var(--eco-lino);
+    border: 1px solid rgba(34, 48, 31, .1);
+    border-radius: 10px;
+}
+
+.eco-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.eco-card-top h3 {
+    margin: 0;
+    font-size: 19px;
+    color: var(--eco-musgo-profundo);
+}
+
+.eco-card p {
+    margin: 0 0 10px;
+    font-size: 14.5px;
+}
+
+.eco-card-nota {
+    padding-top: 10px;
+    border-top: 1px dashed rgba(34, 48, 31, .2);
+    font-size: 13.5px;
+    color: #4B5A47;
+}
+
+/* Biodiversidad */
+.eco-chips-wrap {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(34, 48, 31, .1);
+}
+
+.eco-chips-label {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #526049;
+}
+
+.eco-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.eco-chips li {
+    padding: 6px 12px;
+
+    background: rgba(76, 126, 140, .12);
+    color: var(--eco-agua-quebrada);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.eco-nota-ancha {
+    margin-top: 30px;
+    padding: 16px 20px;
+
+    background: rgba(166, 90, 60, .1);
+    border-left: 4px solid var(--eco-barro);
+    border-radius: 6px;
+
+    max-width: 78ch;
+
+    font-size: 14.5px;
+}
+
+/* Movilidad: tabla */
+.eco-tabla-wrap {
+    overflow-x: auto;
+    margin-bottom: 26px;
+}
+
+.eco-tabla {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+}
+
+.eco-tabla th,
+.eco-tabla td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(34, 48, 31, .12);
+    font-size: 14px;
+}
+
+.eco-tabla thead th {
+    background: var(--eco-musgo-profundo);
+    color: var(--eco-lino);
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+}
+
+.eco-tabla tbody tr:nth-child(even) {
+    background: var(--eco-arena);
+}
+
+.eco-lista-suelta {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.eco-lista-suelta li {
+    padding: 14px 18px;
+    background: var(--eco-arena);
+    border-radius: 8px;
+    font-size: 14.5px;
+}
+
+/* Residuos: código de colores */
+.eco-codigo-colores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+.eco-color-chip {
+    flex: 1 1 200px;
+
+    padding: 16px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+    color: #fff;
+}
+
+.eco-color-chip span {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    opacity: .9;
+}
+
+.eco-color-chip--blanco {
+    background: #6C7A67;
+}
+
+.eco-color-chip--verde {
+    background: var(--eco-helecho);
+}
+
+.eco-color-chip--negro {
+    background: var(--eco-corteza);
+}
+
+/* Acordeón de residuos (detalles nativos, sin JS) */
+.eco-acordeon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.eco-acordeon details {
+    padding: 4px 18px;
+
+    background: var(--eco-lino);
+    border: 1px solid rgba(34, 48, 31, .12);
+    border-radius: 8px;
+}
+
+.eco-acordeon summary {
+    padding: 14px 0;
+
+    font-weight: bold;
+    color: var(--eco-musgo-profundo);
+
+    cursor: pointer;
+}
+
+.eco-acordeon details p {
+    margin: 0 0 16px;
+    font-size: 14.5px;
+    color: #3A4736;
+}
+
+/* Checklist antes / durante / después */
+.eco-checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.eco-checklist li {
+    padding: 22px;
+
+    background: var(--eco-lino);
+    border-top: 3px solid var(--eco-helecho);
+    border-radius: 8px;
+}
+
+.eco-checklist-paso {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    color: var(--eco-musgo-profundo);
+}
+
+.eco-checklist p {
+    margin: 0;
+    font-size: 14.5px;
+}
+
+.eco-reglas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    max-width: 70ch;
+}
+
+.eco-reglas p {
+    margin: 0;
+    padding-left: 18px;
+
+    border-left: 3px solid var(--eco-agua-quebrada);
+
+    font-size: 14.5px;
+}
+
+/* CIERRE */
+.eco-footer {
+    padding: 46px 8vw 70px;
+
+    background: var(--eco-musgo-profundo);
+    color: var(--eco-arena);
+
+    text-align: center;
+}
+
+.eco-aviso {
+    max-width: 68ch;
+    margin: 0 auto 14px;
+    font-size: 13.5px;
+}
+
+.eco-fuentes {
+    max-width: 68ch;
+    margin: 0 auto;
+    font-size: 13.5px;
+}
+
+/* =========================================================
+   ECOTOUR — RESPONSIVE
+   ========================================================= */
+
+@media (width <= 1000px) {
+    .eco-hero-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+    }
+
+    .eco-hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .eco-hero-stats li {
+        flex: 1 1 220px;
+    }
+
+    .eco-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .eco-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eco-checklist {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width <= 650px) {
+    .eco-hero {
+        padding: 44px 6vw 0;
+    }
+
+    .eco-hero-stats {
+        flex-direction: column;
+    }
+
+    .eco-cerrar {
+        top: 12px;
+        right: 12px;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .eco-quicknav {
+        padding-right: 6vw;
+    }
+
+    .eco-block {
+        padding: 48px 6vw;
+    }
+
+    .eco-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .eco-codigo-colores {
+        flex-direction: column;
     }
 }
