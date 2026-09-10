@@ -6,9 +6,13 @@
     <title>Aventourcopa</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
+
+<!-- Interruptor invisible que controla la apertura/cierre de la sección EcoTour (solo HTML/CSS, sin JavaScript) -->
+<input type="checkbox" id="ecotour-toggle" class="ecotour-toggle-input">
 
 <header>
     <div class="logo">
@@ -32,10 +36,10 @@
     </nav>
     <div class="botones">
 
-        <a href="#" class="btn eco">
+        <label for="ecotour-toggle" class="btn eco">
             <i class="fa-solid fa-leaf"></i>
             EcoTour
-        </a>
+        </label>
 
         <a href="#" class="btn game">
             <i class="fa-solid fa-gamepad"></i>
@@ -110,5 +114,361 @@
     </footer>
         </div>
     </section>
+
+<!-- =========================================================
+     SECCIÓN ECOTOUR
+     "Página sobre la página": se abre con el botón EcoTour
+     del header (checkbox #ecotour-toggle, sin JavaScript) y
+     se cierra con la etiqueta "Cerrar" o volviendo a pulsar
+     el botón EcoTour.
+     ========================================================= -->
+<section id="ecotour" class="ecotour-page" aria-label="EcoTour, guía ambiental de Copacabana">
+    <div class="eco-scroll">
+
+        <label for="ecotour-toggle" class="eco-cerrar" aria-label="Cerrar EcoTour">
+            <i class="fa-solid fa-xmark"></i> Cerrar
+        </label>
+
+        <!-- HERO -->
+        <div class="eco-hero">
+            <div class="eco-hero-grid">
+                <div class="eco-hero-texto">
+                    <p class="eco-kicker">EcoTour — Aventourcopa</p>
+                    <h1>Copacabana se recorre con el agua, no contra ella.</h1>
+                    <p class="eco-hero-sub">
+                        Río Aburrá, quebradas, senderos de montaña, fauna, bosques y
+                        ciclorutas: esta es la cara ambiental de Copacabana. Antes de cada
+                        dato te decimos si está confirmado, si puede cambiar o si aún falta
+                        verificarlo.
+                    </p>
+                </div>
+
+                <ul class="eco-hero-stats" aria-label="Copacabana en cifras">
+                    <li>
+                        <i class="fa-solid fa-mountain"></i>
+                        <div><strong>1.454 m</strong><span>altitud de referencia, sobre el nivel del mar</span></div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-water"></i>
+                        <div><strong>7</strong><span>microcuencas reconocidas en el PBOT</span></div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-paw"></i>
+                        <div><strong>10+</strong><span>especies de fauna registradas por cámaras trampa</span></div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bicycle"></i>
+                        <div><strong>EnCicla</strong><span>cobertura activa de bicicletas compartidas</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BARRA DE NAVEGACIÓN FIJA: se queda visible mientras se hace scroll -->
+        <nav class="eco-quicknav" aria-label="Navegación fija de EcoTour">
+            <a href="#eco-territorio" class="eco-q-agua"><i class="fa-solid fa-water"></i>Territorio y agua</a>
+            <a href="#eco-rutas" class="eco-q-rutas"><i class="fa-solid fa-route"></i>Rutas y senderos</a>
+            <a href="#eco-bio" class="eco-q-bio"><i class="fa-solid fa-paw"></i>Biodiversidad</a>
+            <a href="#eco-movilidad" class="eco-q-movilidad"><i class="fa-solid fa-bicycle"></i>Ciclorutas</a>
+            <a href="#eco-residuos" class="eco-q-residuos"><i class="fa-solid fa-recycle"></i>Residuos</a>
+            <a href="#eco-seguridad" class="eco-q-seguridad"><i class="fa-solid fa-shield-heart"></i>Antes de salir</a>
+        </nav>
+
+        <!-- LEYENDA DE ESTADOS -->
+        <section class="eco-leyenda" aria-label="Cómo leer los estados de la información">
+            <p><span class="eco-badge eco-badge--confirmado">Confirmado</span>
+               <span class="eco-badge eco-badge--actualizar">Sujeto a actualización</span>
+               <span class="eco-badge eco-badge--validar">Pendiente de validación</span></p>
+            <p>Así marcamos cada dato en esta guía: lo que ya está respaldado por una fuente
+                oficial, lo que puede cambiar por clima o temporada, y lo que todavía no
+                tiene una confirmación vigente. Verifica siempre antes de salir.</p>
+        </section>
+
+        <!-- TERRITORIO Y AGUA -->
+        <section id="eco-territorio" class="eco-block eco-block--musgo">
+            <p class="eco-block-num">01</p>
+            <h2>Territorio y agua</h2>
+            <div class="eco-grid-2">
+                <div class="eco-texto">
+                    <p>Copacabana está en el norte del Valle de Aburrá, entre San Pedro de los
+                        Milagros, Girardota, Bello, Guarne y Medellín. El río Aburrá y quebradas
+                        como Piedras Blancas, Chuscala, Rodas, La Tolda y El Limonar bajan desde
+                        las laderas rurales hacia el valle urbanizado, y son la columna vertebral
+                        de cualquier recorrido ecológico por el municipio.</p>
+                    <p>La Reserva Forestal Protectora Río Nare y el DRMI Quitasol–La Holanda son
+                        las dos figuras de conservación más relevantes del territorio. Ninguna de
+                        las dos es exclusiva de Copacabana: comparten superficie con municipios
+                        vecinos, así que el mapa de EcoTour muestra el polígono oficial en vez de
+                        atribuirle al municipio toda el área.</p>
+                    <p>La estación <strong>Ancón Norte</strong>, de la red RedRío, vigila la
+                        calidad del agua de quebradas como Piedras Blancas, El Tábano y El
+                        Chuscal. Una buena medición de calidad no es, sin embargo, un permiso
+                        para bañarse, pescar o beber esa agua.</p>
+                </div>
+                <ul class="eco-stat-list">
+                    <li><strong>1.454 m s. n. m.</strong><span>altitud de referencia del municipio</span></li>
+                    <li><strong>70 – 71 km²</strong><span>área municipal (la cifra cambia según la fuente institucional)</span></li>
+                    <li><strong>~1.677 ha</strong><span>esquema técnico de conectividad ecosistémica, Corantioquia</span></li>
+                    <li><strong>7</strong><span>microcuencas reconocidas en el PBOT: Chuscala, Piedras Blancas, Rodas, Los Escobares, La Tolda, Los Aguacates y El Limonar</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- RUTAS Y SENDEROS -->
+        <section id="eco-rutas" class="eco-block eco-block--lino">
+            <p class="eco-block-num">02</p>
+            <h2>Rutas ecológicas y sitios naturales</h2>
+            <p class="eco-block-intro">Fichas con lo que está documentado por la Alcaldía y
+                otras fuentes oficiales. Los campos operativos que no aparecen (horario,
+                tarifa, cupo) se dejan pendientes a propósito: es mejor no saber que saber
+                mal.</p>
+
+            <div class="eco-cards">
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Sendero Piedras Blancas</h3>
+                        <span class="eco-badge eco-badge--actualizar">Sujeto a actualización</span>
+                    </div>
+                    <p>Recorre Granizal, El Cabuyal y El Convento antes de entrar a Yarumito,
+                        Las Vegas, Tobón Quintero y La Asunción. Tiene andenes, cerramientos de
+                        madera, bancas y cebaderos de aves.</p>
+                    <p class="eco-card-nota"><strong>Antes de ir:</strong> no hay horario,
+                        punto de inicio ni tarifa confirmados. No es balneario ni ciclorruta
+                        certificada.</p>
+                </article>
+
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Ecozarzales</h3>
+                        <span class="eco-badge eco-badge--validar">Pendiente de validación</span>
+                    </div>
+                    <p>Experiencia rural que combina cultura cafetera, avistamiento de aves,
+                        senderismo, paisajismo y gastronomía local.</p>
+                    <p class="eco-card-nota"><strong>Antes de ir:</strong> operador, cupo,
+                        precio y dificultad no tienen confirmación reciente. Consulta antes de
+                        reservar cualquier cosa a nombre de este sitio.</p>
+                </article>
+
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Recorrido rural de Granizal</h3>
+                        <span class="eco-badge eco-badge--validar">Pendiente de validación</span>
+                    </div>
+                    <p>Casona de tapia centenaria, tienda de Martina, mirador hacia Medellín y
+                        Bello, cultivos de cebolla y relatos campesinos, documentados por la
+                        Alcaldía en 2017.</p>
+                    <p class="eco-card-nota"><strong>Antes de ir:</strong> el valor histórico
+                        y paisajístico está documentado; la oferta actual, el transporte y el
+                        permiso de ingreso, no.</p>
+                </article>
+
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Santuario y Cerro de la Santa Cruz</h3>
+                        <span class="eco-badge eco-badge--actualizar">Sujeto a actualización</span>
+                    </div>
+                    <p>En la vereda El Cabuyal, con accesos por la vía de la vereda, la vía a
+                        Cristo Rey y un sendero ecológico desde la Ciudadela de la Vida. La cima
+                        es mirador hacia Bello y Copacabana.</p>
+                    <p class="eco-card-nota"><strong>Antes de ir:</strong> no hay horario
+                        permanente confirmado. Verifica transporte, iluminación y cierres por
+                        lluvia.</p>
+                </article>
+
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Salto El Limonar</h3>
+                        <span class="eco-badge eco-badge--validar">Pendiente de validación</span>
+                    </div>
+                    <p>Torrente sobre un peñasco en Zarzal–La Luz, límite con Girardota, con
+                        acceso referido desde el kilómetro 18 de la Autopista Norte.</p>
+                    <p class="eco-card-nota"><strong>Antes de ir:</strong> Corantioquia negó
+                        una concesión para uso recreativo. No se recomienda bañarse, pescar ni
+                        consumir el agua.</p>
+                </article>
+
+                <article class="eco-card">
+                    <div class="eco-card-top">
+                        <h3>Parque Comfama Copacabana</h3>
+                        <span class="eco-badge eco-badge--actualizar">Sujeto a actualización</span>
+                    </div>
+                    <p>Zonas verdes, senderos, lagos, cascada y ciclorruta contigua. Es el único
+                        sitio de esta lista con horario publicado directamente por su
+                        administrador.</p>
+                    <p class="eco-card-nota"><strong>Horario publicado:</strong> martes a
+                        domingo y festivos, 9:00 a. m.–5:00 p. m.; nocturno martes a viernes,
+                        5:00 p. m.–8:30 p. m. Verifica siempre en el canal oficial de Comfama
+                        antes de ir.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- BIODIVERSIDAD -->
+        <section id="eco-bio" class="eco-block eco-block--musgo">
+            <p class="eco-block-num">03</p>
+            <h2>Biodiversidad</h2>
+            <div class="eco-grid-2">
+                <div class="eco-texto">
+                    <p>Entre 2018 y 2024, cuatro cámaras trampa registraron mamíferos medianos
+                        en zona rural, entre 1.520 y 2.506 m s. n. m., con 596 noches-trampa y
+                        50 recorridos. Son registros documentados de presencia, no un censo
+                        completo ni una garantía de avistamiento.</p>
+                    <p>El DRMI Quitasol–La Holanda protege bosques andinos y altoandinos, con el
+                        montañerito paisa y varias especies de orquídeas entre sus valores de
+                        conservación más citados.</p>
+                </div>
+                <div class="eco-chips-wrap">
+                    <p class="eco-chips-label">Fauna registrada en el proyecto de cámaras trampa</p>
+                    <ul class="eco-chips">
+                        <li>Zorro perro</li>
+                        <li>Guagua de montaña</li>
+                        <li>Armadillo</li>
+                        <li>Tayra</li>
+                        <li>Yaguarundí</li>
+                        <li>Tigrillo lanudo</li>
+                        <li>Ocelote</li>
+                        <li>Tití gris</li>
+                        <li>Cusumbo mocoso</li>
+                        <li>Comadreja</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="eco-nota-ancha"><strong>Regla de EcoTour:</strong> nunca publicamos
+                coordenadas de nidos, madrigueras o cámaras trampa, y te pedimos lo mismo: no
+                alimentes, toques ni persigas fauna silvestre.</p>
+        </section>
+
+        <!-- CICLORUTAS Y MOVILIDAD -->
+        <section id="eco-movilidad" class="eco-block eco-block--lino">
+            <p class="eco-block-num">04</p>
+            <h2>Ciclorutas y movilidad sostenible</h2>
+            <p class="eco-block-intro">EnCicla incluye a Copacabana en su cobertura. Estos son
+                los horarios generales del sistema; la disponibilidad de cada estación se
+                consulta en tiempo real, no aquí.</p>
+
+            <div class="eco-tabla-wrap">
+                <table class="eco-tabla">
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Horario general</th>
+                            <th>Último préstamo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lunes a viernes</td><td>5:30 a. m. – 10:00 p. m.</td><td>9:00 p. m.</td></tr>
+                        <tr><td>Sábados</td><td>6:30 a. m. – 8:00 p. m.</td><td>7:00 p. m.</td></tr>
+                        <tr><td>Domingos</td><td>8:00 a. m. – 4:00 p. m.</td><td>3:00 p. m.</td></tr>
+                        <tr><td>Festivos</td><td>Sin servicio</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="eco-lista-suelta">
+                <li><strong>Cicloinfraestructura Norte:</strong> corredor histórico entre Bello,
+                    Copacabana, Girardota y Barbosa, con 1,8 km anunciados para el municipio.
+                    Es un proyecto documentado, no una medición actual de su estado.</li>
+                <li><strong>Rutas integradas del Metro:</strong> C7-010 (Copacabana piscina–Niquía)
+                    y C7-011 (Copacabana San Juan–Niquía). Confirma tarifa y frecuencia el día
+                    del viaje.</li>
+                <li><strong>Parque Comfama Copacabana:</strong> tiene una ciclorruta contigua y
+                    módulos de parqueo de bicicletas en cada portería.</li>
+            </ul>
+        </section>
+
+        <!-- RESIDUOS -->
+        <section id="eco-residuos" class="eco-block eco-block--musgo">
+            <p class="eco-block-num">05</p>
+            <h2>Residuos y reciclaje responsable</h2>
+
+            <div class="eco-codigo-colores">
+                <div class="eco-color-chip eco-color-chip--blanco">Blanco<span>Aprovechables limpios y secos</span></div>
+                <div class="eco-color-chip eco-color-chip--verde">Verde<span>Orgánicos, solo si hay ruta y tratamiento</span></div>
+                <div class="eco-color-chip eco-color-chip--negro">Negro<span>No aprovechables</span></div>
+            </div>
+
+            <div class="eco-acordeon">
+                <details>
+                    <summary>¿A qué hora saco la basura?</summary>
+                    <p>Depende de la dirección y de la macroruta de Copaseo. El plan operativo
+                        vigente todavía contiene franjas diurnas y nocturnas: consulta por tu
+                        dirección antes de sacarla.</p>
+                </details>
+                <details>
+                    <summary>¿Puedo dejar una bolsa en el sendero?</summary>
+                    <p>No. Si no hay un recipiente autorizado en el punto, llévate el residuo de
+                        regreso.</p>
+                </details>
+                <details>
+                    <summary>¿Dónde dejo un colchón o un escombro?</summary>
+                    <p>No lo dejes junto a la basura ordinaria. Copaseo ofrece un servicio
+                        especial: confirma precio, volumen y lugar de entrega antes de sacarlo.</p>
+                </details>
+                <details>
+                    <summary>¿Hay una ruta de reciclaje pensada para turistas?</summary>
+                    <p>No encontramos una ruta selectiva vigente con días y sectores publicados.
+                        Pregunta directamente al prestador o a la Alcaldía.</p>
+                </details>
+                <details>
+                    <summary>¿Dónde entrego pilas, aceites o medicamentos vencidos?</summary>
+                    <p>La Alcaldía anunció un <strong>Punto Eco</strong> en la carrera 51 # 48-41,
+                        barrio Simón Bolívar, para posconsumo (pilas, electrónicos, medicamentos
+                        vencidos, aceites usados). El horario no está publicado: confirma
+                        disponibilidad antes de ir.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SEGURIDAD Y TURISMO RESPONSABLE -->
+        <section id="eco-seguridad" class="eco-block eco-block--lino">
+            <p class="eco-block-num">06</p>
+            <h2>Antes de salir: seguridad y turismo responsable</h2>
+
+            <ol class="eco-checklist">
+                <li>
+                    <span class="eco-checklist-paso">Antes</span>
+                    <p>Revisa alertas de SIATA, el estado del camino, horario del administrador
+                        y si el sitio exige reserva, guía o permiso. Confirma transporte y
+                        batería del teléfono.</p>
+                </li>
+                <li>
+                    <span class="eco-checklist-paso">Durante</span>
+                    <p>Quédate en el recorrido autorizado, no entres a predios privados, no te
+                        acerques a la fauna, no te bañes en cauces sin autorización y respeta
+                        los lugares de culto.</p>
+                </li>
+                <li>
+                    <span class="eco-checklist-paso">Después</span>
+                    <p>Llévate todos tus residuos y reporta daños o riesgos por los canales
+                        oficiales de la Alcaldía.</p>
+                </li>
+            </ol>
+
+            <div class="eco-reglas">
+                <p>No beber, bañarse ni pescar en quebradas sin autorización y confirmación
+                    sanitaria vigente.</p>
+                <p>Contrata experiencias con prestadores formales, idealmente con Registro
+                    Nacional de Turismo.</p>
+                <p>No existe una fuente que permita clasificar zonas por nivel de seguridad:
+                    viaja con plan, cuida tus pertenencias y avisa a alguien de confianza.</p>
+            </div>
+        </section>
+
+        <!-- CIERRE / FUENTES -->
+        <div class="eco-footer">
+            <p class="eco-aviso">Esta guía orienta y no reemplaza un permiso ambiental, una
+                autorización oficial ni una instrucción de la autoridad o del administrador de
+                cada sitio. Verificado el 9 de septiembre de 2026.</p>
+            <p class="eco-fuentes"><strong>Fuentes principales:</strong> Alcaldía de Copacabana,
+                Corantioquia, Área Metropolitana del Valle de Aburrá (RedRío, EnCicla), SIATA,
+                Copaseo y Comfama.</p>
+            <label for="ecotour-toggle" class="eco-cerrar eco-cerrar--pie">
+                <i class="fa-solid fa-xmark"></i> Volver a Aventourcopa
+            </label>
+        </div>
+
+    </div>
+</section>
+
 </body>
 </html>
