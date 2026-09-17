@@ -1,1 +1,1388 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Aventourcopa
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="ecotour.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Interruptor invisible que controla la apertura/cierre de la sección EcoTour (solo HTML/CSS, sin JavaScript) -->
+  <header>
+   <div class="logo">
+    <img alt="Logo" src="imagenes/logo.png"/>
+    <div class="titulo">
+     <h1>
+      Aventourcopa
+     </h1>
+     <p>
+      Descubre nuevas aventuras
+     </p>
+    </div>
+   </div>
+   <nav>
+    <ul>
+     <li>
+      <a href="#">
+       Experiencias
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Imágenes
+      </a>
+     </li>
+     <li>
+      <a href="#lugares">
+       Lugares
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Gastronomía
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Hospedajes
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Asistente IA
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Contacto
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="botones">
+    <a class="btn eco" href="ecotour.html">
+     EcoTour
+    </a>
+    <a class="btn game" href="#">
+     <i class="fa-solid fa-gamepad">
+     </i>
+     GameTour
+    </a>
+   </div>
+  </header>
+  <section id="inicio">
+   <div id="espacio">
+   </div>
+   <div id="divinicio">
+    <div class="carrusel">
+     <div class="texto">
+      <h1>
+       Bienvenidos a Mi Página
+      </h1>
+      <p>
+       Descubre nuestros productos y servicios
+      </p>
+     </div>
+     <div class="imgcarrusel">
+      <img alt="" src="imagenes/imagen1.png"/>
+      <img alt="" src="imagenes/imagen2.png"/>
+      <img alt="" src="imagenes/imagen3.png"/>
+      <img alt="" src="imagenes/imagen4.jpg"/>
+      <img alt="" src="imagenes/imagen5.jpg"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- =========================================================
+         SECCIÓN LUGARES
+         Directorio de lugares emblemáticos, barrios, veredas y
+         parajes de Copacabana. Sección propia del flujo de la
+         página (no es una superposición): el ítem "Lugares" del
+         menú principal enlaza directamente aquí con #lugares.
+         Fuente editorial: dossier de investigación Aventourcopa
+         (corte de fuentes: 10 de septiembre de 2026).
+         ========================================================= -->
+  <section aria-label="Lugares de Copacabana" class="lugares-page" id="lugares">
+   <div class="lug-wrap">
+    <!-- ENCABEZADO -->
+    <div class="lug-hero">
+     <p class="lug-kicker">
+      Lugares — Aventourcopa
+     </p>
+     <h2>
+      Copacabana, rincón por rincón
+     </h2>
+     <p class="lug-hero-sub">
+      Del Parque Principal al último paraje de montaña: esta es la guía de
+                    lugares de Copacabana, organizada de lo más emblemático a lo más
+                    pequeño. Cada ficha indica de dónde sale el dato y qué tan seguro
+                    está confirmado, para que decidas con información real antes de
+                    salir.
+     </p>
+     <ul aria-label="Copacabana en cifras territoriales" class="lug-hero-stats">
+      <li>
+       <i class="fa-solid fa-city">
+       </i>
+       <div>
+        <strong>
+         23
+        </strong>
+        <span>
+         barrios urbanos
+        </span>
+       </div>
+      </li>
+      <li>
+       <i class="fa-solid fa-tree">
+       </i>
+       <div>
+        <strong>
+         15
+        </strong>
+        <span>
+         veredas rurales
+        </span>
+       </div>
+      </li>
+      <li>
+       <i class="fa-solid fa-map-pin">
+       </i>
+       <div>
+        <strong>
+         7
+        </strong>
+        <span>
+         parajes reconocidos
+        </span>
+       </div>
+      </li>
+      <li>
+       <i class="fa-solid fa-landmark">
+       </i>
+       <div>
+        <strong>
+         14
+        </strong>
+        <span>
+         lugares imprescindibles
+        </span>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <!-- MENÚ INTERNO DE LA SECCIÓN -->
+    <nav aria-label="Menú de la sección Lugares" class="lug-menu">
+     <a class="lug-menu-cat lug-menu-cat--estrella" href="#lug-imprescindibles">
+      <i class="fa-solid fa-star">
+      </i>
+      Lugares imprescindibles
+     </a>
+     <a class="lug-menu-cat lug-menu-cat--barrio" href="#lug-barrios">
+      <i class="fa-solid fa-city">
+      </i>
+      Barrios
+      <span>
+       23
+      </span>
+     </a>
+     <a class="lug-menu-cat lug-menu-cat--vereda" href="#lug-veredas">
+      <i class="fa-solid fa-tree">
+      </i>
+      Veredas
+      <span>
+       15
+      </span>
+     </a>
+     <a class="lug-menu-cat lug-menu-cat--paraje" href="#lug-parajes">
+      <i class="fa-solid fa-map-pin">
+      </i>
+      Parajes
+      <span>
+       7
+      </span>
+     </a>
+    </nav>
+    <!-- LEYENDA DE ESTADOS -->
+    <p class="lug-leyenda">
+     <span class="lug-badge lug-badge--confirmado">
+      Confirmado
+     </span>
+     <span class="lug-badge lug-badge--actualizar">
+      Sujeto a actualización
+     </span>
+     <span class="lug-badge lug-badge--validar">
+      Pendiente de validación
+     </span>
+     así marcamos cada ficha. Antes de salir, confirma siempre horario,
+                acceso y estado de la vía por un canal oficial.
+    </p>
+    <!-- ============================================
+                 01. LUGARES IMPRESCINDIBLES
+                 ============================================ -->
+    <section class="lug-bloque" id="lug-imprescindibles">
+     <p class="lug-bloque-num">
+      01
+     </p>
+     <h3>
+      Lugares imprescindibles
+     </h3>
+     <p class="lug-bloque-intro">
+      Los catorce sitios más nombrados por las fuentes municipales y
+                    departamentales: el corazón religioso y cívico de la cabecera, el
+                    patrimonio ferroviario y de caminos, y los paisajes naturales más
+                    documentados de la zona rural.
+     </p>
+     <div aria-label="Índice de lugares imprescindibles" class="lug-indice">
+      <a href="#lug-parque-principal">
+       Parque Principal
+      </a>
+      <a href="#lug-parroquia-asuncion">
+       Parroquia de la Asunción
+      </a>
+      <a href="#lug-san-juan-tasajera">
+       San Juan de la Tasajera
+      </a>
+      <a href="#lug-santa-cruz">
+       Santuario de la Santa Cruz
+      </a>
+      <a href="#lug-casa-cultura">
+       Casa de la Cultura
+      </a>
+      <a href="#lug-estacion-ferrocarril">
+       Estación del Ferrocarril
+      </a>
+      <a href="#lug-puente-imusa">
+       Puente de IMUSA
+      </a>
+      <a href="#lug-casa-consistorial">
+       Antigua Casa Consistorial
+      </a>
+      <a href="#lug-piedras-blancas">
+       Sendero Piedras Blancas
+      </a>
+      <a href="#lug-salto-limonar">
+       Salto El Limonar
+      </a>
+      <a href="#lug-ballenitas">
+       Parque Las Ballenitas
+      </a>
+      <a href="#lug-cristo-rey-deportiva">
+       Unidad Deportiva Cristo Rey
+      </a>
+      <a href="#lug-cementerio">
+       Cementerio de la Asunción
+      </a>
+      <a href="#lug-ecozarzales">
+       Ecozarzales
+      </a>
+     </div>
+     <div class="lug-cards">
+      <article class="lug-card" id="lug-parque-principal">
+       <div class="lug-card-top">
+        <h4>
+         Parque Principal Simón Bolívar
+        </h4>
+        <span class="lug-badge lug-badge--actualizar">
+         Sujeto a actualización
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Centro urbano, barrio Simón Bolívar
+       </p>
+       <p>
+        La Sociedad de Mejoras Públicas construyó en 1924 el primer parque
+                            amurallado con jardín. Hoy conserva la estatua de Simón Bolívar, el
+                            monumento a la Madre y el quiosco de 1994, escenario de retretas
+                            dominicales y encuentros vecinales.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        el parque está en
+                            renovación desde marzo de 2025; a mediados de 2026 se reportaba un
+                            avance cercano al 92 % físico, sin fecha definitiva de entrega.
+                            Confirma el estado actual antes de planear tu visita.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-parroquia-asuncion">
+       <div class="lug-card-top">
+        <h4>
+         Parroquia Nuestra Señora de la Asunción
+        </h4>
+        <span class="lug-badge lug-badge--confirmado">
+         Confirmado
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Costado oriental del Parque Principal
+       </p>
+       <p>
+        Templo en bloques de piedra levantado hacia 1870, con la torre lateral
+                            del campanario y el reloj añadidos en los años cuarenta. Conserva el
+                            retablo de Nuestra Señora de Copacabana y la Capilla del Calvario.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no hay un horario
+                            turístico publicado; respeta los horarios de culto y evita fotografiar
+                            durante las misas.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-san-juan-tasajera">
+       <div class="lug-card-top">
+        <h4>
+         Parroquia San Juan de la Tasajera
+        </h4>
+        <span class="lug-badge lug-badge--actualizar">
+         Sujeto a actualización
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Barrio San Juan, a unos 2 km de la cabecera
+       </p>
+       <p>
+        Construida en la década de 1960 en el lugar que la memoria municipal
+                            asocia con la primera misa del Valle de Aburrá, el 8 de septiembre de
+                            1541. Guarda un confesionario y estaciones del viacrucis talladas en
+                            madera.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        el vínculo con la
+                            misa de 1541 es tradición histórica local documentada por la Alcaldía,
+                            no un hallazgo arqueológico independiente.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-santa-cruz">
+       <div class="lug-card-top">
+        <h4>
+         Santuario y Cerro de la Santa Cruz
+        </h4>
+        <span class="lug-badge lug-badge--actualizar">
+         Sujeto a actualización
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Vereda El Cabuyal
+       </p>
+       <p>
+        Cruz metálica de cerca de 25 metros, levantada desde 1968 por
+                            iniciativa del padre Jesús Bernal Vélez con trabajo comunitario. Es
+                            mirador hacia Bello y Copacabana, y punto de peregrinación, caminata
+                            y cicloturismo.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no hay horario
+                            permanente ni ficha de accesibilidad publicados; verifica el estado de
+                            la vía y la iluminación si subes de tarde.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-casa-cultura">
+       <div class="lug-card-top">
+        <h4>
+         Casa de la Cultura «Fundadora de Pueblos»
+        </h4>
+        <span class="lug-badge lug-badge--confirmado">
+         Confirmado
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Centro urbano
+       </p>
+       <p>
+        Inaugurada el 20 de mayo de 1988 en la antigua escuela de niñas de
+                            Cuatro Esquinas. Ofrece monitorías gratuitas de música, artes
+                            plásticas, danza y literatura, y es candidata a Bien de Interés
+                            Cultural departamental desde 2023.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        confirma la
+                            programación vigente de monitorías y eventos antes de asistir.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-estacion-ferrocarril">
+       <div class="lug-card-top">
+        <h4>
+         Estación del Ferrocarril de Copacabana
+        </h4>
+        <span class="lug-badge lug-badge--confirmado">
+         Confirmado
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Calle 56 # 42-236, entre la Autopista Norte y la entrada al municipio
+       </p>
+       <p>
+        El único bien patrimonial de Copacabana con declaratoria nacional
+                            comprobada: Bien de Interés Cultural del ámbito nacional por el
+                            Decreto 746 del 24 de abril de 1996.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no se encontró
+                            información pública sobre uso actual, estado físico o acceso para
+                            visitantes; consulta con la Alcaldía.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-puente-imusa">
+       <div class="lug-card-top">
+        <h4>
+         Puente de IMUSA (Puente del Carretero)
+        </h4>
+        <span class="lug-badge lug-badge--validar">
+         Pendiente de validación
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Sobre la quebrada Piedras Blancas, calle 50, barrio La Asunción
+       </p>
+       <p>
+        Obra de ingeniería incluida en 2023 en la Lista Indicativa de
+                            Candidatos a Bien de Interés Cultural de Antioquia. La Alcaldía
+                            difundió en 2025 que supera los 170 años de historia.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        la cifra de 170
+                            años proviene de una publicación en redes y no ha sido corroborada de
+                            forma independiente; una candidatura departamental tampoco equivale a
+                            declaratoria definitiva.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-casa-consistorial">
+       <div class="lug-card-top">
+        <h4>
+         Antigua Casa Consistorial
+        </h4>
+        <span class="lug-badge lug-badge--validar">
+         Pendiente de validación
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Centro urbano
+       </p>
+       <p>
+        El portal municipal la describe como el primer Palacio Municipal y
+                            como inmueble de valor arquitectónico y patrimonial de Copacabana.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no se publicó fecha
+                            exacta de construcción ni diagnóstico de conservación; su uso actual
+                            debe confirmarse en sitio.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-piedras-blancas">
+       <div class="lug-card-top">
+        <h4>
+         Quebrada y sendero ecológico Piedras Blancas
+        </h4>
+        <span class="lug-badge lug-badge--actualizar">
+         Sujeto a actualización
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Granizal, El Cabuyal y El Convento; en zona urbana, Yarumito, Las Vegas, Tobón Quintero y La Asunción
+       </p>
+       <p>
+        Sendero con andenes, cerramientos de madera, bancas, árboles y
+                            cebaderos de aves a lo largo de una de las microcuencas más
+                            documentadas del municipio. La Alcaldía y Corantioquia intervinieron
+                            el corredor en 2018 para protegerlo.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no hay horario,
+                            punto de inicio ni tarifa confirmados. No es balneario.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-salto-limonar">
+       <div class="lug-card-top">
+        <h4>
+         Salto El Limonar
+        </h4>
+        <span class="lug-badge lug-badge--validar">
+         Pendiente de validación
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Vereda Zarzal–La Luz, parte alta, límite con Girardota
+       </p>
+       <p>
+        Torrente que cae sobre un peñasco; uno de los pocos paisajes rurales
+                            descritos específicamente por la Alcaldía como sitio natural y
+                            turístico. Se accede por un camino carreteable desde el kilómetro 18
+                            de la Autopista Norte.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no hay diagnóstico
+                            hidrológico ni de seguridad publicado. No se recomienda bañarse,
+                            pescar ni consumir el agua.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-ballenitas">
+       <div class="lug-card-top">
+        <h4>
+         Parque Recreativo Las Ballenitas
+        </h4>
+        <span class="lug-badge lug-badge--actualizar">
+         Sujeto a actualización
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Vereda Ancón, a 3 km de la cabecera, sobre la Autopista Norte
+       </p>
+       <p>
+        Dieciséis hectáreas con senderos, lagos, riachuelo, cascada, jardines,
+                            piscinas, toboganes y restaurante. Es una oferta recreativa privada o
+                            concesionada, no un parque público de administración municipal.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        confirma apertura,
+                            tarifas y reservas directamente con el operador.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-cristo-rey-deportiva">
+       <div class="lug-card-top">
+        <h4>
+         Unidad Deportiva Cristo Rey
+        </h4>
+        <span class="lug-badge lug-badge--validar">
+         Pendiente de validación
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Barrio Cristo Rey
+       </p>
+       <p>
+        Escenario de los Juegos Suramericanos de 2010 en polo acuático y del
+                            Campeonato Suramericano de Natación, con piscina olímpica y tribuna
+                            para más de 600 espectadores.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        no hay horarios de
+                            uso turístico ni condiciones de acceso publicadas para visitantes
+                            ocasionales.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-cementerio">
+       <div class="lug-card-top">
+        <h4>
+         Cementerio Nuestra Señora de la Asunción
+        </h4>
+        <span class="lug-badge lug-badge--confirmado">
+         Confirmado
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Colina del centro urbano
+       </p>
+       <p>
+        El portal municipal lo describe también como mirador urbano. Forma
+                            parte de la Ruta Religiosa y Patrimonial de Antioquia junto con las
+                            parroquias de la Asunción y San Juan de la Tasajera.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        es un lugar de
+                            culto y memoria familiar; mantén una actitud respetuosa y evita
+                            sesiones fotográficas ajenas al duelo.
+       </p>
+      </article>
+      <article class="lug-card" id="lug-ecozarzales">
+       <div class="lug-card-top">
+        <h4>
+         Ecozarzales
+        </h4>
+        <span class="lug-badge lug-badge--validar">
+         Pendiente de validación
+        </span>
+       </div>
+       <p class="lug-card-ubi">
+        <i class="fa-solid fa-location-dot">
+        </i>
+        Zona rural, sector Zarzal
+       </p>
+       <p>
+        Experiencia de aprendizaje sobre cultura cafetera, aves, plantas y
+                            agua, con senderismo, paisajismo y gastronomía local. La guía
+                            turística departamental la clasifica como dificultad grado 2 y una
+                            duración aproximada de 6 horas.
+       </p>
+       <p class="lug-card-nota">
+        <strong>
+         Antes de ir:
+        </strong>
+        operador, cupo,
+                            precio y dificultad real no tienen confirmación reciente; la duración
+                            es una estimación que cambia según el grupo y el clima.
+       </p>
+      </article>
+     </div>
+    </section>
+    <!-- ============================================
+                 02. BARRIOS
+                 ============================================ -->
+    <section class="lug-bloque lug-bloque--alt" id="lug-barrios">
+     <p class="lug-bloque-num">
+      02
+     </p>
+     <h3>
+      Los 23 barrios urbanos
+     </h3>
+     <p class="lug-bloque-intro">
+      Lista de referencia del Plan de Desarrollo Municipal 2024-2027,
+                    confirmada por la cartografía del PBOT 2023. Para varios barrios, las
+                    fuentes públicas aún no ofrecen una ficha completa de historia o
+                    población: lo indicamos en vez de inventarlo.
+     </p>
+     <div aria-label="Índice de barrios" class="lug-indice lug-indice--barrio">
+      <a href="#barrio-cristo-rey">
+       Cristo Rey
+      </a>
+      <a href="#barrio-el-mojon">
+       El Mojón
+      </a>
+      <a href="#barrio-el-porvenir">
+       El Porvenir
+      </a>
+      <a href="#barrio-el-recreo">
+       El Recreo
+      </a>
+      <a href="#barrio-el-remanso">
+       El Remanso
+      </a>
+      <a href="#barrio-fatima">
+       Fátima
+      </a>
+      <a href="#barrio-la-asuncion">
+       La Asunción
+      </a>
+      <a href="#barrio-la-azulita">
+       La Azulita
+      </a>
+      <a href="#barrio-la-misericordia">
+       La Misericordia
+      </a>
+      <a href="#barrio-machado">
+       Machado
+      </a>
+      <a href="#barrio-maria">
+       María
+      </a>
+      <a href="#barrio-miraflores">
+       Miraflores
+      </a>
+      <a href="#barrio-obrero">
+       Obrero
+      </a>
+      <a href="#barrio-pedregal">
+       Pedregal
+      </a>
+      <a href="#barrio-pedrera">
+       Pedrera
+      </a>
+      <a href="#barrio-san-francisco">
+       San Francisco
+      </a>
+      <a href="#barrio-san-juan">
+       San Juan
+      </a>
+      <a href="#barrio-simon-bolivar">
+       Simón Bolívar
+      </a>
+      <a href="#barrio-tablazo-canoas">
+       Tablazo–Canoas
+      </a>
+      <a href="#barrio-tobon-quintero">
+       Tobón Quintero
+      </a>
+      <a href="#barrio-villanueva">
+       Villanueva
+      </a>
+      <a href="#barrio-zona-multiple">
+       Zona Múltiple
+      </a>
+      <a href="#barrio-yarumito">
+       Yarumito
+      </a>
+     </div>
+     <div class="lug-directorio">
+      <article class="lug-mini" id="barrio-cristo-rey">
+       <h4>
+        Cristo Rey
+       </h4>
+       <p>
+        Recibió parte de una intervención vial de 620 m compartida con San
+                            Juan, Obrero, Miraflores y El Mojón en 2024. Sin ficha histórica
+                            individual publicada.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-el-mojon">
+       <h4>
+        El Mojón
+       </h4>
+       <p>
+        Su nombre se asocia a la quebrada El Mojón; el sector Los Zapatas
+                            aparece vinculado en el PBOT. Recibió obras viales en 2024.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-el-porvenir">
+       <h4>
+        El Porvenir
+       </h4>
+       <p>
+        Barrio urbano incluido en el cuadrante de seguridad junto a Las
+                            Vegas, La Asunción, Pedregal, El Remanso y La Misericordia. Sin
+                            datos públicos de historia o población.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-el-recreo">
+       <h4>
+        El Recreo
+       </h4>
+       <p>
+        En 2018, la Junta de Acción Comunal gestionó por convenio solidario
+                            la construcción de una acera en una vía principal, con una inversión
+                            reportada de $16.244.192.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-el-remanso">
+       <h4>
+        El Remanso
+       </h4>
+       <p>
+        Barrio independiente en la lista vigente, aunque el PBOT lo agrupa
+                            en tratamiento urbanístico junto con Pedregal y La Misericordia.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-fatima">
+       <h4>
+        Fátima
+       </h4>
+       <p>
+        Incluido en los recorridos de seguridad de 2024 junto con San
+                            Francisco, Simón Bolívar, La Pedrera, Tobón Quintero, Yarumito,
+                            Miraflores, Obrero, El Recreo y Cristo Rey.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-la-asuncion">
+       <h4>
+        La Asunción
+       </h4>
+       <p>
+        Alberga la Parroquia Nuestra Señora de la Asunción y es atravesado
+                            por la quebrada Piedras Blancas. El Plan 2024-2027 prevé un puente
+                            vehicular que lo conecte con la futura plaza de mercado.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-la-azulita">
+       <h4>
+        La Azulita
+       </h4>
+       <p>
+        El Acuerdo 025 de 2000 registra allí la capilla y el cementerio
+                            municipal; identificado como sector de interés patrimonial y como
+                            sede de servicios para adultos mayores.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-la-misericordia">
+       <h4>
+        La Misericordia
+       </h4>
+       <p>
+        Nombrado como barrio en el Plan 2024-2027, aunque el PBOT lo trata
+                            como sector asociado a Pedregal para fines urbanísticos.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-machado">
+       <h4>
+        Machado
+       </h4>
+       <p>
+        El PBOT le asigna los sectores Viaducto–Luna Lunera y Quebrada de
+                            Rodas. En 2024 la Alcaldía recorrió sus calles dentro de la
+                            estrategia «La Alcaldía te escucha».
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-maria">
+       <h4>
+        María
+       </h4>
+       <p>
+        Incluye los sectores Los Corrales (parte baja), Tintexa–Los Quintero
+                            y Criadero El Rey, en tratamientos urbanísticos de redesarrollo o
+                            mejoramiento integral.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-miraflores">
+       <h4>
+        Miraflores
+       </h4>
+       <p>
+        Parte del paquete de vías repavimentadas en 2024, junto con San
+                            Juan, Obrero, Cristo Rey y El Mojón.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-obrero">
+       <h4>
+        Obrero
+       </h4>
+       <p>
+        Barrio con tratamiento de consolidación según el PBOT; incluido en
+                            las obras viales de 2024.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-pedregal">
+       <h4>
+        Pedregal
+       </h4>
+       <p>
+        Agrupa los sectores Misericordia, Remanso y parte alta en el
+                            tratamiento urbanístico del PBOT, aunque cada uno figura como barrio
+                            independiente en la lista vigente.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-pedrera">
+       <h4>
+        Pedrera
+       </h4>
+       <p>
+        El PBOT propuso allí un centro de barrio; incluido en los recorridos
+                            nocturnos de seguridad de 2024.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-san-francisco">
+       <h4>
+        San Francisco
+       </h4>
+       <p>
+        El PBOT señala un sector de «parte alta» como área de desarrollo. No
+                            debe confundirse con el municipio de San Francisco, Antioquia.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-san-juan">
+       <h4>
+        San Juan
+       </h4>
+       <p>
+        El barrio de mayor densidad histórica documental. Aquí está la
+                            Parroquia San Juan de la Tasajera y el PBOT lo reconoce como sector
+                            de valor patrimonial por su trazado vial.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-simon-bolivar">
+       <h4>
+        Simón Bolívar
+       </h4>
+       <p>
+        El centro urbano histórico, también llamado Centro Simón Bolívar.
+                            Reúne el Parque Principal, la Parroquia de la Asunción, la Casa de
+                            la Cultura y buena parte del inventario patrimonial del PBOT.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-tablazo-canoas">
+       <h4>
+        Tablazo–Canoas
+       </h4>
+       <p>
+        La lista administrativa reciente une ambos nombres en un solo
+                            barrio; el PBOT identifica el sector Los Zapatas como relacionado.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-tobon-quintero">
+       <h4>
+        Tobón Quintero
+       </h4>
+       <p>
+        Atravesado por la quebrada Piedras Blancas; el PBOT lo clasifica
+                            entre los barrios con tratamiento de mejoramiento integral.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-villanueva">
+       <h4>
+        Villanueva
+       </h4>
+       <p>
+        En 2024 se reportaron huertas comunitarias y escolares. No debe
+                            confundirse con la urbanización privada Ciudadela Villanueva.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-zona-multiple">
+       <h4>
+        Zona Múltiple
+       </h4>
+       <p>
+        Incluido entre los 23 barrios, aunque el término también designa una
+                            categoría de uso urbano ligada a corredores como la Autopista Norte
+                            y la Autopista Medellín–Bogotá; es la unidad con mayor ambigüedad de
+                            límites.
+       </p>
+      </article>
+      <article class="lug-mini" id="barrio-yarumito">
+       <h4>
+        Yarumito
+       </h4>
+       <p>
+        Atravesado por Piedras Blancas; el PBOT lo incluye entre los barrios
+                            de mejoramiento integral. El mapa predial lo rotula «Yarumalito»,
+                            una variante cartográfica no confirmada como barrio aparte.
+       </p>
+      </article>
+     </div>
+    </section>
+    <!-- ============================================
+                 03. VEREDAS
+                 ============================================ -->
+    <section class="lug-bloque" id="lug-veredas">
+     <p class="lug-bloque-num">
+      03
+     </p>
+     <h3>
+      Las 15 veredas rurales
+     </h3>
+     <p class="lug-bloque-intro">
+      Copacabana no tiene corregimientos: la Gobernación de Antioquia
+                    registra cero. La ruralidad se organiza en estas 15 veredas, entre
+                    ladera agrícola, quebradas y paisajes de montaña.
+     </p>
+     <div aria-label="Índice de veredas" class="lug-indice lug-indice--vereda">
+      <a href="#vereda-alvarado">
+       Alvarado
+      </a>
+      <a href="#vereda-ancon">
+       Ancón
+      </a>
+      <a href="#vereda-cabuyal">
+       Cabuyal
+      </a>
+      <a href="#vereda-el-convento">
+       El Convento
+      </a>
+      <a href="#vereda-el-noral">
+       El Noral
+      </a>
+      <a href="#vereda-el-salado">
+       El Salado
+      </a>
+      <a href="#vereda-fontidueno">
+       Fontidueño
+      </a>
+      <a href="#vereda-granizal">
+       Granizal
+      </a>
+      <a href="#vereda-la-veta">
+       La Veta
+      </a>
+      <a href="#vereda-montanita">
+       Montañita
+      </a>
+      <a href="#vereda-penolcito">
+       Peñolcito
+      </a>
+      <a href="#vereda-quebrada-arriba">
+       Quebrada Arriba
+      </a>
+      <a href="#vereda-sabaneta">
+       Sabaneta
+      </a>
+      <a href="#vereda-zarzal-curazao">
+       Zarzal Curazao
+      </a>
+      <a href="#vereda-zarzal-la-luz">
+       Zarzal La Luz
+      </a>
+     </div>
+     <div class="lug-directorio lug-directorio--vereda">
+      <article class="lug-mini" id="vereda-alvarado">
+       <h4>
+        Alvarado
+       </h4>
+       <p>
+        Vereda de ladera incluida en el proyecto de acueducto multiveredal
+                            que en 2024 proyectaba beneficiar a 6.500 familias de varias
+                            localidades.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-ancon">
+       <h4>
+        Ancón
+       </h4>
+       <p>
+        Aquí se ubica el Parque Recreativo Las Ballenitas, a 3 km de la
+                            cabecera sobre la Autopista Norte. El paraje Ancón 2 es una unidad
+                            distinta y no debe fusionarse con la vereda.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-cabuyal">
+       <h4>
+        Cabuyal
+       </h4>
+       <p>
+        Atravesada por Piedras Blancas; allí se ubica el Santuario de la
+                            Santa Cruz. En 2024, un convite comunitario mejoró 900 m de vía.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-el-convento">
+       <h4>
+        El Convento
+       </h4>
+       <p>
+        Territorio de contacto entre suelo rural y expansión urbana,
+                            también recorrido por Piedras Blancas. En 2024 se intervinieron 774
+                            m de vía en el corredor Convento–El Llano.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-el-noral">
+       <h4>
+        El Noral
+       </h4>
+       <p>
+        Con obras comunitarias documentadas desde 2018 en el sector
+                            Pitaya–Cocorolló.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-el-salado">
+       <h4>
+        El Salado
+       </h4>
+       <p>
+        Vereda agrícola, parte del sistema de acueducto multiveredal La
+                            Chuscala.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-fontidueno">
+       <h4>
+        Fontidueño
+       </h4>
+       <p>
+        Descrita mediante los sectores Loma de los Álvarez y Loma de los
+                            Duque, este último con una intervención vial de 210 m en 2024.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-granizal">
+       <h4>
+        Granizal
+       </h4>
+       <p>
+        Vereda de rutas ecológicas: casona con más de 150 años de historia,
+                            cultivos de cebolla y miradores hacia Medellín, Bello y Copacabana.
+                            En 2024, 120 productores de cebolla recibieron apoyo municipal.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-la-veta">
+       <h4>
+        La Veta
+       </h4>
+       <p>
+        Reconocida en las tres fuentes territoriales principales; sin
+                            información pública individual sobre población o patrimonio.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-montanita">
+       <h4>
+        Montañita
+       </h4>
+       <p>
+        Vereda agrícola; en 2024 se contrató su alcantarillado, con
+                            beneficio proyectado para 852 personas. El paraje Montañuela es una
+                            unidad distinta.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-penolcito">
+       <h4>
+        Peñolcito
+       </h4>
+       <p>
+        Vereda agrícola de ladera; sin ficha demográfica propia publicada.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-quebrada-arriba">
+       <h4>
+        Quebrada Arriba
+       </h4>
+       <p>
+        Vereda agrícola destacada por el PISCC municipal; sin cartografía de
+                            límites internos publicada.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-sabaneta">
+       <h4>
+        Sabaneta
+       </h4>
+       <p>
+        Señalada entre las veredas de mayor susceptibilidad a procesos
+                            erosivos, junto con Granizal, Peñolcito, Alvarado, Montañita,
+                            Quebrada Arriba y Zarzal.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-zarzal-curazao">
+       <h4>
+        Zarzal Curazao
+       </h4>
+       <p>
+        En 2024 fue sede de un consejo de seguridad descentralizado de la
+                            Junta de Acción Comunal y de una jornada de bienestar animal.
+       </p>
+      </article>
+      <article class="lug-mini" id="vereda-zarzal-la-luz">
+       <h4>
+        Zarzal La Luz
+       </h4>
+       <p>
+        En su parte alta, límite con Girardota, se ubica el Salto El
+                            Limonar, con acceso por camino carreteable desde el km 18 de la
+                            Autopista Norte.
+       </p>
+      </article>
+     </div>
+     <p class="lug-nota-ancha">
+      <strong>
+       Vida rural:
+      </strong>
+      café, caña panelera,
+                    cebolla junca, naranja, plátano y fique son los productos agrícolas más
+                    citados por el municipio, junto con ganadería y fincas de recreo. Las
+                    veredas de ladera enfrentan procesos erosivos por pendientes, prácticas
+                    productivas, extracción de materiales y urbanización.
+     </p>
+    </section>
+    <!-- ============================================
+                 04. PARAJES
+                 ============================================ -->
+    <section class="lug-bloque lug-bloque--alt" id="lug-parajes">
+     <p class="lug-bloque-num">
+      04
+     </p>
+     <h3>
+      Los 7 parajes
+     </h3>
+     <p class="lug-bloque-intro">
+      Los parajes son referencias territoriales rurales menores. No son
+                    veredas adicionales ni deben tratarse como tal.
+     </p>
+     <ul class="lug-lista-parajes">
+      <li>
+       <strong>
+        Alto de la Virgen
+       </strong>
+       — santuario de peregrinación que
+                        la propia Alcaldía ubica en jurisdicción del municipio de Guarne,
+                        aunque la guía turística departamental lo agrupa con Copacabana.
+                        Confirma la jurisdicción y el acceso antes de promocionarlo como
+                        atractivo copacabanense.
+      </li>
+      <li>
+       <strong>
+        Montañuela
+       </strong>
+       — paraje distinto de la vereda Montañita;
+                        no deben fusionarse pese a la similitud del nombre.
+      </li>
+      <li>
+       <strong>
+        El Llano
+       </strong>
+       — aparece unido a la vereda El Convento en
+                        obras viales recientes, pero no está verificado como vereda
+                        independiente.
+      </li>
+      <li>
+       <strong>
+        Ancón 2
+       </strong>
+       — paraje distinto de la vereda Ancón, donde
+                        está el Parque Las Ballenitas.
+      </li>
+      <li>
+       <strong>
+        El Pinar
+       </strong>
+       — paraje reconocido en el Plan de Desarrollo
+                        2024-2027; sin ficha pública individual.
+      </li>
+      <li>
+       <strong>
+        Las Margaritas
+       </strong>
+       — paraje reconocido en el Plan de
+                        Desarrollo 2024-2027; sin ficha pública individual.
+      </li>
+      <li>
+       <strong>
+        Salinas
+       </strong>
+       — paraje reconocido en el Plan de Desarrollo
+                        2024-2027, vinculado en la cartografía al camino Salinas–Alto de la
+                        Sierra.
+      </li>
+     </ul>
+    </section>
+    <!-- CIERRE / FUENTES -->
+    <div class="lug-footer">
+     <p class="lug-aviso">
+      Esta guía distingue hechos confirmados, datos
+                    institucionales y tradición histórica local; no reemplaza un permiso,
+                    una autorización oficial ni la instrucción del administrador de cada
+                    sitio. Verificado el 10 de septiembre de 2026.
+     </p>
+     <p class="lug-fuentes">
+      <strong>
+       Fuentes principales:
+      </strong>
+      Alcaldía de
+                    Copacabana, Plan de Desarrollo Municipal 2024-2027, PBOT (Acuerdo 025 de
+                    2000 y cartografía 2023), Gobernación de Antioquia, DANE y Lista
+                    Indicativa de Candidatos a Bienes de Interés Cultural de Antioquia.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section id="contacto">
+   <div class="footer">
+    <footer>
+     <div class="top">
+      <div class="left">
+       <h2>
+        Contacto
+       </h2>
+       <h1 id="titu">
+        Gracias por estar en nuestra pagina
+       </h1>
+       <button>
+        Sugerencias y comentarios
+       </button>
+      </div>
+      <div class="pie-nosotros">
+       <ul>
+        <li>
+         <h2>
+          Company
+         </h2>
+         <a href="#">
+          programadores
+         </a>
+         <a href="#">
+          Contacto
+         </a>
+        </li>
+       </ul>
+       <ul>
+        <li>
+         <h2>
+          Resources
+         </h2>
+         <a href="#">
+          Ayudo
+         </a>
+         <a href="#">
+          Soporte
+         </a>
+         <a href="#">
+          Instruciones
+         </a>
+         <a href="#">
+          conoce mas
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="bottom">
+      <div class="left">
+       <p>
+        © Aventourcopa 2026. Todos los derechos reservados .
+       </p>
+      </div>
+      <div class="right socials">
+       <a href="#">
+        <i class="fa-brands fa-facebook">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-twitter">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-discord">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-linkedin">
+        </i>
+       </a>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </section>
+  <!-- =========================================================
+     SECCIÓN ECOTOUR
+     "Página sobre la página": se abre con el botón EcoTour
+     del header (checkbox #ecotour-toggle, sin JavaScript) y
+     se cierra con la etiqueta "Cerrar" o volviendo a pulsar
+     el botón EcoTour.
+     ========================================================= -->
+ </body>
+</html>
 
