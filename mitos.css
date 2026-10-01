@@ -1,0 +1,685 @@
+/* =====================================================================
+   MITOS Y LEYENDAS — estilos de la sección
+   Contenido: relatos y tradiciones orales de Copacabana (ex "Ecos de
+   Copacabana"), con la paleta de Aventourcopa. Todo está limitado a
+   .mitos-page; las clases llevan el prefijo mit- para no chocar con
+   style.css.
+   Índice: 1 Base · 2 Portada · 3 Subíndice · 4 Intro · 5 Leyendas
+           6 Personajes · 7 Galería · 8 Videos · 9 Podcast · 10 Cierre
+           11 Lightbox · 12 Animaciones · 13 Responsive
+   ===================================================================== */
+
+/* ---------- 1. Base ---------- */
+.mitos-page {
+    --noche: #2B1F1A;
+    --ciruela: #4A3448;
+    --cafe: #3B271A;
+    --suave: #6E5A4A;
+    --teja: #C55A2E;
+    --oliva: #5C6B47;
+    --ambar: #E8A33D;
+    --ambar-claro: #F4C874;
+    --caramelo: #B98B5E;
+    --fondo: #F3E7D3;
+    --papel: #FBF6EC;
+    --pergamino: #E9D9B5;
+    --borde: #DFCFB0;
+    --luna: #F6EEDF;
+
+    --titulos: 'Cinzel', Georgia, serif;
+    --texto: 'Crimson Pro', Georgia, serif;
+    --ui: 'Jost', Arial, sans-serif;
+
+    position: relative;
+    overflow: hidden;
+    background: var(--fondo);
+    color: var(--cafe);
+    font-family: var(--texto);
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+/* style.css fuerza Arial en todos los elementos: aquí se hereda la tipografía de la sección */
+.mitos-page * { font-family: inherit; }
+
+.mitos-page h2,
+.mitos-page h3,
+.mitos-page h4 {
+    margin: 0 0 .5em;
+    font-family: var(--titulos);
+    color: var(--cafe);
+    letter-spacing: .01em;
+    line-height: 1.25;
+}
+
+.mitos-page img { max-width: 100%; display: block; }
+
+.mit-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.mit-section {
+    position: relative;
+    padding: 88px 0;
+    scroll-margin-top: 150px;
+}
+
+.mit-section h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+
+.mit-center { text-align: center; }
+
+.mit-eyebrow {
+    margin-bottom: .9em;
+    font-family: var(--ui);
+    font-size: .74rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--teja);
+}
+
+.mit-eyebrow::before { content: "✦ "; }
+
+.mit-lead {
+    max-width: 62ch;
+    margin: 0 auto 2.4rem;
+    color: var(--suave);
+}
+
+.mit-divider {
+    display: flex;
+    justify-content: center;
+    color: var(--caramelo);
+    opacity: .8;
+}
+
+.mit-divider svg { width: 200px; height: 20px; overflow: visible; }
+
+/* Botones */
+.mit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    padding: .95em 1.8em;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-family: var(--ui);
+    font-size: .85rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform .25s, box-shadow .25s, background .25s, color .25s;
+}
+
+.mit-btn-primary {
+    background: linear-gradient(135deg, #E27A3F, var(--teja));
+    color: #FFFFFF;
+    box-shadow: 0 8px 22px rgba(197, 90, 46, .3);
+}
+
+.mit-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(197, 90, 46, .42); }
+
+.mit-btn-ghost {
+    border-color: rgba(246, 238, 223, .55);
+    background: rgba(246, 238, 223, .08);
+    color: var(--luna);
+}
+
+.mit-btn-ghost:hover { background: rgba(246, 238, 223, .2); transform: translateY(-3px); }
+
+.mit-ico-arrow::after { content: "→"; }
+
+/* ---------- 2. Portada ---------- */
+.mit-hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 82vh;
+    overflow: hidden;
+    color: var(--luna);
+}
+
+.mit-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.8) brightness(.6);
+}
+
+.mit-hero-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top, rgba(43, 31, 26, .85) 8%, rgba(43, 31, 26, .3) 60%, rgba(43, 31, 26, .5) 100%),
+        linear-gradient(to right, rgba(74, 52, 72, .55), transparent 65%);
+}
+
+.mit-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin-left: max(24px, calc((100vw - 1180px) / 2));
+    padding: 120px 24px 110px;
+}
+
+.mit-hero .mit-eyebrow { color: var(--ambar-claro); }
+
+.mitos-page .mit-hero-titulo {
+    margin-bottom: .4em;
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    line-height: 1.12;
+    color: #FFFFFF;
+}
+
+.mit-hero-titulo span { display: block; color: var(--ambar-claro); }
+
+.mit-hero-lead { max-width: 56ch; color: #EBDDC2; }
+
+.mit-hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+.mit-hero-moon {
+    position: absolute;
+    top: 56px;
+    right: 8%;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #FFF7E2, var(--luna) 55%, rgba(246, 238, 223, 0) 72%);
+    box-shadow: 0 0 60px 18px rgba(246, 238, 223, .2);
+    animation: mitLuna 6s ease-in-out infinite;
+}
+
+.mit-hero-fog {
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    bottom: 8%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(246, 238, 223, .14), transparent);
+    filter: blur(18px);
+    animation: mitNiebla 22s ease-in-out infinite alternate;
+}
+
+.mit-hero-mountains {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    z-index: 1;
+    width: 100%;
+    height: 20%;
+}
+
+/* ---------- 3. Subíndice ---------- */
+.mit-subnav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 22px;
+    max-width: 920px;
+    margin: -28px auto 0;
+    padding: 12px 22px;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--papel);
+    box-shadow: 0 10px 28px rgba(59, 39, 26, .14);
+}
+
+.mit-marca {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    font-family: var(--titulos);
+    font-weight: 600;
+    color: var(--cafe);
+}
+
+.mit-lantern { color: var(--ambar); }
+.mit-lantern .mit-flame { animation: mitLlama 2.6s ease-in-out infinite; transform-origin: 20px 22px; }
+
+.mit-subnav ul { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+
+.mit-subnav a {
+    display: block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-family: var(--ui);
+    font-size: .88rem;
+    text-decoration: none;
+    color: var(--cafe);
+    background: var(--pergamino);
+    transition: background .25s, color .25s, transform .25s;
+}
+
+.mit-subnav a:hover { background: var(--ciruela); color: var(--luna); transform: translateY(-2px); }
+
+/* ---------- 4. Introducción ---------- */
+.mit-intro { padding-top: 100px; }
+
+.mit-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.mitos-page .mit-intro-text h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); }
+.mit-intro-text p { color: var(--suave); }
+.mit-intro-text p + p { margin-top: 1em; }
+
+.mit-drop-cap::first-letter {
+    float: left;
+    padding: .06em .1em 0 0;
+    font-family: var(--titulos);
+    font-size: 3.4em;
+    font-weight: 700;
+    line-height: .78;
+    color: var(--teja);
+}
+
+.mit-intro-figure,
+.mit-galeria-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    cursor: zoom-in;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.mit-intro-figure { box-shadow: 0 18px 40px rgba(59, 39, 26, .22); }
+
+.mit-intro-figure img,
+.mit-galeria-item img { transition: transform .5s ease; }
+
+.mit-intro-figure:hover img { transform: scale(1.04); }
+
+.mit-intro-figure figcaption,
+.mit-galeria-item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .9em 1.1em;
+    font-family: var(--ui);
+    font-size: .8rem;
+    color: var(--luna);
+    background: linear-gradient(to top, rgba(43, 31, 26, .88), transparent);
+}
+
+.mit-ico-expand {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid currentColor;
+}
+
+.mit-ico-expand::before,
+.mit-ico-expand::after { content: ""; position: absolute; background: currentColor; }
+.mit-ico-expand::before { width: 6px; height: 1.5px; top: -1.5px; left: -1.5px; }
+.mit-ico-expand::after  { width: 1.5px; height: 6px; top: -1.5px; left: -1.5px; }
+
+/* ---------- 5. Leyendas ---------- */
+.mit-leyendas { background: linear-gradient(180deg, transparent, rgba(235, 221, 194, .55) 12%, rgba(235, 221, 194, .55) 88%, transparent); }
+
+.mit-grupo-header { display: flex; align-items: center; gap: .7em; margin: 3.2em 0 1.4em; }
+
+.mit-grupo-header::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--borde), transparent);
+}
+
+.mit-grupo-icon { font-size: 1.3rem; }
+
+.mitos-page .mit-grupo-title {
+    margin: 0;
+    font-family: var(--ui);
+    font-size: .84rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--suave);
+}
+
+.mit-leyendas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+.mit-leyenda-card {
+    position: relative;
+    padding: 1.6em 1.6em 1.8em;
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--borde);
+    border-radius: 14px;
+    background: var(--papel);
+    box-shadow: 0 3px 12px rgba(59, 39, 26, .06);
+    transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+
+.mit-leyenda-card[data-cat="aparicion"]  { border-left-color: #7A5F78; }
+.mit-leyenda-card[data-cat="naturaleza"] { border-left-color: var(--oliva); }
+.mit-leyenda-card[data-cat="misterio"]   { border-left-color: var(--ambar); }
+
+.mit-leyenda-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--caramelo);
+    box-shadow: 0 14px 28px rgba(59, 39, 26, .14);
+}
+
+.mit-cat-tag {
+    display: inline-block;
+    margin-bottom: .7em;
+    font-family: var(--ui);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--suave);
+}
+
+.mit-leyenda-icon { margin-bottom: .4em; font-size: 1.7rem; transition: transform .35s; }
+.mit-leyenda-card:hover .mit-leyenda-icon { transform: scale(1.15) rotate(-6deg); }
+
+.mitos-page .mit-leyenda-card h3 { margin-bottom: .4em; font-size: 1.15rem; }
+.mit-leyenda-card p { font-size: .98rem; color: var(--suave); }
+
+/* ---------- 6. Personajes ---------- */
+.mit-scroll-panel {
+    position: relative;
+    padding: 2.6em 2em;
+    overflow: hidden;
+    border-radius: 22px;
+    background: var(--pergamino);
+    box-shadow: 0 18px 44px rgba(59, 39, 26, .2);
+}
+
+.mit-scroll-texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .5;
+    mix-blend-mode: multiply;
+    background:
+        radial-gradient(1.5px 1.5px at 15% 25%, rgba(59, 47, 30, .18), transparent 60%),
+        radial-gradient(1.5px 1.5px at 70% 15%, rgba(59, 47, 30, .15), transparent 60%),
+        radial-gradient(1.5px 1.5px at 40% 70%, rgba(59, 47, 30, .14), transparent 60%),
+        radial-gradient(1.5px 1.5px at 85% 60%, rgba(59, 47, 30, .16), transparent 60%),
+        linear-gradient(120deg, rgba(59, 47, 30, .05), transparent 40%, rgba(59, 47, 30, .05));
+    background-size: 500px 500px;
+}
+
+.mit-personajes-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.mit-personaje { transition: transform .3s; }
+.mit-personaje:hover { transform: translateY(-5px); }
+
+.mit-personaje-seal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto .7em;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--tint) 70%, #fff 10%), var(--tint) 55%, #241C11 100%);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, .25), inset 0 -6px 10px rgba(0, 0, 0, .35), 0 6px 14px rgba(0, 0, 0, .3);
+}
+
+.mit-personaje-seal::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 1px dashed rgba(59, 47, 30, .35);
+    border-radius: 50%;
+}
+
+.mit-personaje-seal span {
+    font-family: var(--titulos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--luna);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+
+.mitos-page .mit-personaje h4 { margin: 0; font-size: 1rem; color: var(--cafe); }
+
+/* ---------- 7. Galería ---------- */
+.mit-galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+}
+
+.mit-galeria-item { aspect-ratio: 4 / 5; box-shadow: 0 6px 18px rgba(59, 39, 26, .14); }
+.mit-galeria-item img { width: 100%; height: 100%; object-fit: cover; }
+.mit-galeria-item:hover img { transform: scale(1.08); }
+
+/* ---------- 8. Videos ---------- */
+.mit-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.6rem;
+}
+
+.mit-video-card {
+    padding: 1.2em;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    background: var(--papel);
+    box-shadow: 0 4px 14px rgba(59, 39, 26, .08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.mit-video-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(59, 39, 26, .14); }
+
+.mit-video-frame { position: relative; overflow: hidden; border-radius: 10px; background: #000; }
+.mit-video-frame video { display: block; width: 100%; max-height: 340px; background: #000; }
+
+.mit-expand-btn {
+    position: absolute;
+    top: .6em;
+    right: .6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid rgba(246, 238, 223, .4);
+    border-radius: 50%;
+    background: rgba(43, 31, 26, .65);
+    color: var(--luna);
+    transition: background .25s, transform .25s;
+}
+
+.mit-expand-btn:hover { background: var(--teja); color: #FFFFFF; transform: scale(1.1); }
+
+.mitos-page .mit-video-card h3 { margin: .8em 0 .3em; font-size: 1.1rem; }
+.mit-video-card p { font-size: .95rem; color: var(--suave); }
+
+/* ---------- 9. Podcast ---------- */
+.mit-podcast-wrap { display: flex; justify-content: center; }
+
+.mit-podcast-card {
+    max-width: 640px;
+    padding: 3em 2.4em;
+    border-radius: 26px;
+    text-align: center;
+    color: var(--luna);
+    background:
+        radial-gradient(circle at 50% 0%, rgba(232, 163, 61, .22), transparent 60%),
+        linear-gradient(135deg, var(--noche), var(--ciruela));
+    box-shadow: 0 20px 46px rgba(43, 31, 26, .3);
+}
+
+.mit-podcast-card .mit-eyebrow { color: var(--ambar-claro); }
+.mitos-page .mit-podcast-card h2 { color: #FFFFFF; }
+.mit-podcast-card p { margin-bottom: 1.6em; color: #EBDDC2; }
+.mit-podcast-card .mit-eyebrow { margin-bottom: .9em; }
+
+.mit-podcast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1em;
+    border: 1px solid var(--ambar);
+    border-radius: 50%;
+    background: rgba(232, 163, 61, .14);
+    color: var(--ambar-claro);
+    animation: mitLatido 3s ease-in-out infinite;
+}
+
+/* ---------- 10. Cierre ---------- */
+.mit-cierre { padding: 20px 0 70px; text-align: center; }
+
+.mit-footer-quote {
+    max-width: 60ch;
+    margin: 0 auto .5em;
+    font-family: var(--titulos);
+    font-size: 1.1rem;
+    color: var(--cafe);
+}
+
+.mit-footer-cta { margin-bottom: 1.4em; font-family: var(--ui); color: var(--teja); }
+.mit-footer-credit { font-family: var(--ui); font-size: .82rem; color: var(--suave); }
+
+/* ---------- 11. Lightbox ---------- */
+.mit-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000; /* por encima del encabezado fijo (z-index 1000) */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 4vw;
+    background: rgba(26, 18, 15, .93);
+}
+
+.mit-lightbox.is-open { display: flex; }
+
+.mit-lightbox img,
+.mit-lightbox video {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .6);
+}
+
+.mit-lightbox-close {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    border: 1px solid rgba(246, 238, 223, .35);
+    border-radius: 50%;
+    background: rgba(246, 238, 223, .1);
+    color: var(--luna);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.mit-lightbox-close:hover { background: var(--teja); color: #FFFFFF; }
+
+/* ---------- 12. Animaciones ---------- */
+/* Luces flotantes ("ánimas") dentro de la sección */
+.mit-animas { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+
+.mit-anima {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--ambar);
+    box-shadow: 0 0 10px 3px rgba(232, 163, 61, .65), 0 0 22px 8px rgba(232, 163, 61, .22);
+    opacity: 0;
+    animation: mitAnima linear infinite;
+}
+
+/* Aparición al hacer scroll (solo si el navegador puede animarla) */
+.mit-js .mit-reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
+.mit-js .mit-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes mitAnima {
+    0%   { opacity: 0; transform: translate(0, 0) scale(.8); }
+    8%   { opacity: .9; }
+    50%  { transform: translate(var(--dx), calc(var(--dy) * -1)) scale(1.15); }
+    92%  { opacity: .7; }
+    100% { opacity: 0; transform: translate(calc(var(--dx) * 2), calc(var(--dy) * -2)) scale(.8); }
+}
+
+@keyframes mitLuna {
+    0%, 100% { box-shadow: 0 0 60px 18px rgba(246, 238, 223, .2); }
+    50%      { box-shadow: 0 0 76px 26px rgba(246, 238, 223, .32); }
+}
+
+@keyframes mitNiebla {
+    from { transform: translateX(-4%); }
+    to   { transform: translateX(4%); }
+}
+
+@keyframes mitLlama {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    45%      { opacity: .75; transform: scale(.94); }
+    55%      { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes mitLatido {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(232, 163, 61, .5); }
+    50%      { box-shadow: 0 0 0 14px rgba(232, 163, 61, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mitos-page *,
+    .mitos-page *::before,
+    .mitos-page *::after { animation: none !important; transition: none !important; }
+
+    .mit-js .mit-reveal { opacity: 1; transform: none; }
+    .mit-animas { display: none; }
+}
+
+/* ---------- 13. Responsive ---------- */
+@media (width <= 880px) {
+    .mit-intro-grid { grid-template-columns: 1fr; }
+    .mit-personajes-grid { grid-template-columns: repeat(2, 1fr); }
+    .mit-section { scroll-margin-top: 300px; }
+}
+
+@media (width <= 720px) {
+    .mit-section { padding: 60px 0; }
+    .mit-hero { min-height: 74vh; }
+    .mit-hero-content { margin-left: auto; margin-right: auto; padding: 90px 20px 90px; }
+    .mit-hero-moon { top: 40px; width: 76px; height: 76px; }
+    .mit-hero-mountains { height: 13%; }
+    .mit-subnav { border-radius: 24px; margin-left: 16px; margin-right: 16px; }
+    .mit-grupo-header { margin-top: 2.4em; }
+    .mitos-page .mit-grupo-title { white-space: normal; }
+    .mit-divider svg { width: 140px; }
+    .mit-podcast-card { padding: 2.4em 1.4em; }
+}
