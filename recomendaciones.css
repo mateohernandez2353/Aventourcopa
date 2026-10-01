@@ -1,0 +1,366 @@
+/* =====================================================================
+   RECOMENDACIONES — estilos de la sección
+   Todo está limitado a .rec-page. Interactividad solo con CSS:
+   filtros y pestañas (radios + labels), <details> para los consejos.
+   Índice: 1 Base · 2 Portada · 3 Filtros · 4 Tarjetas · 5 Itinerarios
+           6 Seguridad · 7 Animaciones · 8 Responsive
+   ===================================================================== */
+
+/* ---------- 1. Base ---------- */
+.rec-page {
+    --verde: #5C6B47;
+    --verde-suave: #7A8F6A;
+    --ambar: #E8A33D;
+    --teja: #C55A2E;
+    --cafe: #3B271A;
+    --texto-suave: #6E5A4A;
+    --fondo: #F7EEDC;
+    --papel: #FFFBF3;
+    --borde: #E6D7B9;
+    --sombra: 0 4px 14px rgba(59, 39, 26, .08);
+
+    background: var(--fondo);
+    color: var(--cafe);
+    padding-bottom: 60px;
+}
+
+.rec-page h2,
+.rec-page h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--cafe);
+}
+
+.rec-page p { line-height: 1.6; }
+
+.rec-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+.rec-titulo {
+    margin: 64px 0 8px;
+    font-size: 28px;
+}
+
+.rec-intro {
+    max-width: 680px;
+    margin-bottom: 26px;
+    color: var(--texto-suave);
+}
+
+/* ---------- 2. Portada ---------- */
+.rec-hero {
+    padding: 72px 0 90px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(232, 163, 61, .25), transparent 40%),
+        linear-gradient(135deg, #4B5A39 0%, var(--verde) 55%, var(--verde-suave) 100%);
+    color: #FFFBF3;
+}
+
+.rec-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 5px 16px;
+    border-radius: 30px;
+    background: rgba(255, 251, 243, .15);
+    border: 1px solid rgba(255, 251, 243, .35);
+    font-size: 12.5px;
+    font-weight: bold;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.rec-page .rec-hero h2 {
+    margin-bottom: 14px;
+    font-size: 42px;
+    color: #FFFFFF;
+    animation: recSube .8s ease both;
+}
+
+.rec-hero p {
+    max-width: 640px;
+    margin: 0 auto;
+    animation: recSube .8s .15s ease both;
+}
+
+.rec-aviso {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    max-width: 860px;
+    margin: -34px auto 0;
+    padding: 18px 24px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--ambar);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(59, 39, 26, .14);
+    font-size: 14.5px;
+}
+
+.rec-aviso i { margin-top: 4px; color: var(--ambar); font-size: 20px; }
+
+/* ---------- 3. Filtros (radios ocultos + labels) ---------- */
+.rec-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rec-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.rec-filtros label,
+.rec-tabs label {
+    cursor: pointer;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background .25s, color .25s, transform .25s, box-shadow .25s;
+}
+
+.rec-filtros label:hover,
+.rec-tabs label:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+
+/* Filtro activo */
+#f-all:checked ~ .rec-filtros [for="f-all"],
+#f-nat:checked ~ .rec-filtros [for="f-nat"],
+#f-pat:checked ~ .rec-filtros [for="f-pat"],
+#f-fam:checked ~ .rec-filtros [for="f-fam"],
+#f-dep:checked ~ .rec-filtros [for="f-dep"],
+#f-cul:checked ~ .rec-filtros [for="f-cul"],
+#t-a:checked ~ .rec-tabs [for="t-a"],
+#t-b:checked ~ .rec-tabs [for="t-b"],
+#t-c:checked ~ .rec-tabs [for="t-c"],
+#t-d:checked ~ .rec-tabs [for="t-d"],
+#t-e:checked ~ .rec-tabs [for="t-e"],
+#t-f:checked ~ .rec-tabs [for="t-f"],
+#t-g:checked ~ .rec-tabs [for="t-g"] {
+    background: var(--verde);
+    border-color: var(--verde);
+    color: #FFFFFF;
+}
+
+/* Foco con teclado */
+#f-all:focus-visible ~ .rec-filtros [for="f-all"],
+#f-nat:focus-visible ~ .rec-filtros [for="f-nat"],
+#f-pat:focus-visible ~ .rec-filtros [for="f-pat"],
+#f-fam:focus-visible ~ .rec-filtros [for="f-fam"],
+#f-dep:focus-visible ~ .rec-filtros [for="f-dep"],
+#f-cul:focus-visible ~ .rec-filtros [for="f-cul"],
+#t-a:focus-visible ~ .rec-tabs [for="t-a"],
+#t-b:focus-visible ~ .rec-tabs [for="t-b"],
+#t-c:focus-visible ~ .rec-tabs [for="t-c"],
+#t-d:focus-visible ~ .rec-tabs [for="t-d"],
+#t-e:focus-visible ~ .rec-tabs [for="t-e"],
+#t-f:focus-visible ~ .rec-tabs [for="t-f"],
+#t-g:focus-visible ~ .rec-tabs [for="t-g"] {
+    outline: 3px solid var(--ambar);
+    outline-offset: 2px;
+}
+
+/* Ocultar las tarjetas que no son de la categoría elegida */
+#f-nat:checked ~ .rec-grid .rec-card:not(.c-nat),
+#f-pat:checked ~ .rec-grid .rec-card:not(.c-pat),
+#f-fam:checked ~ .rec-grid .rec-card:not(.c-fam),
+#f-dep:checked ~ .rec-grid .rec-card:not(.c-dep),
+#f-cul:checked ~ .rec-grid .rec-card:not(.c-cul) {
+    display: none;
+}
+
+/* ---------- 4. Tarjetas ---------- */
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.rec-card {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--verde-suave);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+    transition: transform .3s, box-shadow .3s;
+    animation: recSube .5s ease both;
+}
+
+.rec-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(59, 39, 26, .14);
+}
+
+.rec-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.rec-ico {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: #EDF0E4;
+    color: var(--verde);
+    font-size: 19px;
+    transition: background .3s, color .3s, transform .3s;
+}
+
+.rec-card:hover .rec-ico {
+    background: var(--verde);
+    color: #FFFFFF;
+    transform: rotate(-8deg) scale(1.08);
+}
+
+.rec-badge {
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: #EDF0E4;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rec-badge.media { background: #FBEBCB; color: #96600B; }
+.rec-badge.alta  { background: #F8DDD0; color: #A63F16; }
+
+.rec-card h3 { margin-bottom: 8px; font-size: 19px; }
+.rec-card p  { font-size: 14.5px; }
+
+.rec-meta {
+    margin: 10px 0 14px;
+    color: var(--texto-suave);
+    font-size: 13px !important;
+}
+
+.rec-meta i { margin-right: 6px; color: var(--ambar); }
+
+/* Consejo desplegable */
+.rec-card details {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed var(--borde);
+}
+
+.rec-card summary,
+.rec-seguridad summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 13.5px;
+    font-weight: bold;
+    color: var(--teja);
+}
+
+.rec-card summary::-webkit-details-marker,
+.rec-seguridad summary::-webkit-details-marker { display: none; }
+
+.rec-card summary::after { content: "  +"; }
+.rec-card details[open] summary::after { content: "  −"; }
+
+.rec-card details p {
+    margin-top: 8px;
+    color: var(--texto-suave);
+    animation: recSube .35s ease both;
+}
+
+/* ---------- 5. Itinerarios (pestañas) ---------- */
+.rec-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.rec-panel {
+    display: none;
+    padding: 28px 32px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--ambar);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+    animation: recSube .45s ease both;
+}
+
+#t-a:checked ~ .rec-paneles .p-a,
+#t-b:checked ~ .rec-paneles .p-b,
+#t-c:checked ~ .rec-paneles .p-c,
+#t-d:checked ~ .rec-paneles .p-d,
+#t-e:checked ~ .rec-paneles .p-e,
+#t-f:checked ~ .rec-paneles .p-f,
+#t-g:checked ~ .rec-paneles .p-g {
+    display: block;
+}
+
+.rec-panel h3 { margin-bottom: 6px; font-size: 22px; }
+
+.rec-panel .rec-badge { display: inline-block; margin-right: 6px; }
+
+.rec-panel p { margin-top: 12px; max-width: 760px; }
+
+/* ---------- 6. Seguridad ---------- */
+.rec-seguridad {
+    max-width: 860px;
+}
+
+.rec-seguridad details {
+    margin-bottom: 10px;
+    padding: 14px 20px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    transition: box-shadow .25s;
+}
+
+.rec-seguridad details:hover,
+.rec-seguridad details[open] { box-shadow: var(--sombra); }
+
+.rec-seguridad summary { color: var(--cafe); font-size: 15px; }
+
+.rec-seguridad summary i { width: 26px; color: var(--verde); }
+
+.rec-seguridad details p {
+    margin-top: 10px;
+    color: var(--texto-suave);
+    font-size: 14.5px;
+    animation: recSube .35s ease both;
+}
+
+/* ---------- 7. Animaciones ---------- */
+@keyframes recSube {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rec-page * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- 8. Responsive ---------- */
+@media (width <= 650px) {
+    .rec-hero { padding: 52px 0 80px; }
+    .rec-page .rec-hero h2 { font-size: 30px; }
+    .rec-titulo { font-size: 23px; }
+    .rec-panel { padding: 22px 20px; }
+    .rec-grid { grid-template-columns: 1fr; }
+}
