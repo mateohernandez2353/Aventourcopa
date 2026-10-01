@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones | Aventourcopa</title>
+  <meta name="description" content="Qué hacer en Copacabana, Antioquia: naturaleza, patrimonio, familia, deporte y sabores locales.">
+  <link href="style.css" rel="stylesheet">
+  <link href="sesion.css" rel="stylesheet">
+  <link href="recomendaciones.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+   <a class="logo" href="index.html">
+    <img alt="Logo" src="imagenes/logo.png"/>
+    <div class="titulo">
+     <h1>
+      Aventourcopa
+     </h1>
+     <p>
+      Descubre nuevas aventuras
+     </p>
+    </div>
+   </a>
+   <nav>
+    <ul>
+     <li>
+      <a href="index.html">
+       Inicio
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Imágenes
+      </a>
+     </li>
+     <li>
+      <a href="lugares-copacabana.html">
+       Lugares
+      </a>
+     </li>
+     <li>
+      <a href="mitos.html">
+       Mitos y leyendas
+      </a>
+     </li>
+     <li>
+      <a class="nav-activo" href="recomendaciones.html">
+       Recomendaciones
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Asistente IA
+      </a>
+     </li>
+     <li>
+      <a href="#contacto">
+       Contacto
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <a class="btn btn-sesion" href="#"><i class="fa-solid fa-user" aria-hidden="true"></i> Iniciar sesión</a>
+   <div class="botones">
+    <a class="btn eco" href="ecotour.html">
+     EcoTour
+    </a>
+    <a class="btn game" href="#">
+     <i class="fa-solid fa-gamepad">
+     </i>
+     GameTour
+    </a>
+   </div>
+  </header>
+
+  <section class="rec-page" id="recomendaciones" aria-label="Recomendaciones para visitar Copacabana">
+
+    <!-- PORTADA -->
+    <div class="rec-hero">
+      <div class="rec-wrap">
+        <p class="rec-kicker">Recomendaciones — Aventourcopa</p>
+        <h2>Qué hacer en Copacabana</h2>
+        <p>Una guía para elegir tu plan: caminar, conocer su historia, descansar en familia, hacer deporte o probar sabores locales.</p>
+      </div>
+    </div>
+
+    <div class="rec-aviso">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <p>Esta guía orienta, pero no confirma horarios, tarifas, disponibilidad, estado de senderos ni permisos. Verifica siempre antes de ir. Versión de septiembre de 2026.</p>
+    </div>
+
+    <div class="rec-wrap">
+
+      <!-- ACTIVIDADES (filtros solo con CSS) -->
+      <h3 class="rec-titulo">Actividades para cada interés</h3>
+      <p class="rec-intro">Filtra por tipo de plan y abre «Consejo» en cada tarjeta para saber cómo prepararte.</p>
+
+    <input class="rec-radio" type="radio" name="f" id="f-all" checked>
+    <input class="rec-radio" type="radio" name="f" id="f-nat">
+    <input class="rec-radio" type="radio" name="f" id="f-pat">
+    <input class="rec-radio" type="radio" name="f" id="f-fam">
+    <input class="rec-radio" type="radio" name="f" id="f-dep">
+    <input class="rec-radio" type="radio" name="f" id="f-cul">
+
+      <div class="rec-filtros">
+      <label for="f-all">Todo</label>
+      <label for="f-nat">Naturaleza</label>
+      <label for="f-pat">Patrimonio y fe</label>
+      <label for="f-fam">Familia</label>
+      <label for="f-dep">Deporte</label>
+      <label for="f-cul">Sabores y cultura</label>
+      </div>
+      <div class="rec-grid">
+      <article class="rec-card c-nat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-tree" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Sendero Piedras Blancas</h3>
+        <p>Caminata suave junto a la quebrada, con andenes, bancas y cebaderos de aves.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1–2 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Recórrelo de día, verifica el tramo habilitado y prefiere ir acompañado.</p>
+        </details>
+      </article>
+      <article class="rec-card c-nat c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Ruta Ecozarzales</h3>
+        <p>Café, aves, plantas, agua y gastronomía local de la mano de anfitriones rurales.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Medio día</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Reserva antes: la información oficial es de 2017 y puede haber cambiado.</p>
+        </details>
+      </article>
+      <article class="rec-card c-nat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Ruta de la Naranza</h3>
+        <p>Senderismo para respirar aire limpio y disfrutar del paisaje rural.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Por confirmar</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Aún faltan datos de inicio, distancia y dificultad: consúltalos con turismo.</p>
+        </details>
+      </article>
+      <article class="rec-card c-nat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Salto El Limonar</h3>
+        <p>Torrente sobre un peñasco en la vereda El Zarzal-La Luz, con acceso desde el km 18 de la Autopista Norte.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Medio día</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Solo para contemplar y fotografiar: no te bañes ni trepes por las rocas.</p>
+        </details>
+      </article>
+      <article class="rec-card c-nat c-dep">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-mountain" aria-hidden="true"></i></span>
+          <span class="rec-badge alta">Alta</span>
+        </div>
+        <h3>Morrón de la Sierra</h3>
+        <p>Ascenso de montaña de dificultad extrema, pensado para visitantes preparados.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Día completo</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Solo con guía, buen clima, equipo y señal: no es para improvisar.</p>
+        </details>
+      </article>
+      <article class="rec-card c-nat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-dove" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Observación de aves</h3>
+        <p>Ecozarzales y Piedras Blancas son buenos puntos para ver aves y biodiversidad.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>2–3 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>No reproduzcas cantos ni alimentes a la fauna; usa ropa discreta.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Parque Principal y centro</h3>
+        <p>El mejor punto de partida: zonas verdes, quiosco, comercio, cafés y vida cotidiana.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>2–3 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Pregunta por retretas o eventos programados.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-church" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Parroquia de la Asunción</h3>
+        <p>Templo de estilo español en bloques de piedra, con tres naves, campanario y reloj.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Evita recorrerlo como turista durante la misa.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-place-of-worship" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>San Juan de la Tasajera</h3>
+        <p>A unos 2 km del centro: arquitectura, confesionario y viacrucis tallado en madera. Allí se ofició la primera misa del Valle de Aburrá, en 1541.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1–2 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Pide permiso para fotografiar el interior.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat c-nat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-cross" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Santuario de la Santa Cruz</h3>
+        <p>Mirador hacia Bello y Copacabana, al que se sube por la vereda El Cabuyal o por un sendero ecológico.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>2–3 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Confirma que el sendero esté habilitado y lleva agua. Fecha tradicional: 3 de mayo.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-binoculars" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Cementerio mirador</h3>
+        <p>Colina con vista al centro urbano y ruta de memoria sobre familias y oficios.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Silencio y respeto; pide autorización para fotografiar sepulturas.</p>
+        </details>
+      </article>
+      <article class="rec-card c-pat c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Casa de la Cultura</h3>
+        <p>Antigua escuela de niñas de Cuatro Esquinas (1988): exposiciones, talleres y agenda artística.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Consulta la agenda y la disponibilidad antes de ir.</p>
+        </details>
+      </article>
+      <article class="rec-card c-fam c-dep">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Parque Las Ballenitas</h3>
+        <p>16 hectáreas en la vereda Ancón: piscinas, toboganes, lagos, senderos, cascada y canchas.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Día completo</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Revisa tarifas, horarios y reglamento; supervisa siempre a los menores.</p>
+        </details>
+      </article>
+      <article class="rec-card c-fam">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-people-roof" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Día familiar tranquilo</h3>
+        <p>Parque, comida local, un paseo corto por el centro y una actividad cultural.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Medio día</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Deja pausas, sombra y agua; no mezcles jornada acuática con caminata exigente.</p>
+        </details>
+      </article>
+      <article class="rec-card c-dep">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-person-swimming" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Unidad Deportiva Cristo Rey</h3>
+        <p>Sede del Suramericano de Natación 2010: piscina olímpica y tribuna para más de 600 personas.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1–4 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>No asumas acceso libre: confirma horarios, tarifas y carriles.</p>
+        </details>
+      </article>
+      <article class="rec-card c-dep">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-bicycle" aria-hidden="true"></i></span>
+          <span class="rec-badge media">Media</span>
+        </div>
+        <h3>Ciclismo de montaña y carretera</h3>
+        <p>Las montañas y vías rurales atraen ciclistas, aunque aún no hay una ruta oficial verificada.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Por diseñar</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Casco, luces, kit mecánico y guía; cuidado con el tráfico.</p>
+        </details>
+      </article>
+      <article class="rec-card c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-music" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Fiestas y celebraciones</h3>
+        <p>Fiestas de la Naranja, de la Juventud y el Deporte, patronales (15 de agosto), Semana Santa y aniversario del 8 de septiembre.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>Según agenda</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Las fechas cambian cada año: confírmalas antes de viajar.</p>
+        </details>
+      </article>
+      <article class="rec-card c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Historias de habitantes</h3>
+        <p>Recorridos de memoria oral por el centro, los barrios y las veredas con anfitriones locales.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1–2 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Pide consentimiento antes de fotografiar o grabar.</p>
+        </details>
+      </article>
+      <article class="rec-card c-cul">
+        <div class="rec-card-top">
+          <span class="rec-ico"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span>
+          <span class="rec-badge baja">Baja</span>
+        </div>
+        <h3>Sabores locales</h3>
+        <p>Restaurantes, panaderías, cafés y emprendimientos: prioriza lo local y pregunta por ingredientes.</p>
+        <p class="rec-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i>1–2 h</p>
+        <details>
+          <summary>Consejo</summary>
+          <p>Consulta alergias, horarios y medios de pago directamente.</p>
+        </details>
+      </article>
+      </div>
+
+      <!-- ITINERARIOS (pestañas solo con CSS) -->
+      <h3 class="rec-titulo">Itinerarios sugeridos</h3>
+      <p class="rec-intro">Siete planes listos según el tiempo y la energía que tengas.</p>
+
+    <input class="rec-radio" type="radio" name="t" id="t-a" checked>
+    <input class="rec-radio" type="radio" name="t" id="t-b">
+    <input class="rec-radio" type="radio" name="t" id="t-c">
+    <input class="rec-radio" type="radio" name="t" id="t-d">
+    <input class="rec-radio" type="radio" name="t" id="t-e">
+    <input class="rec-radio" type="radio" name="t" id="t-f">
+    <input class="rec-radio" type="radio" name="t" id="t-g">
+
+      <div class="rec-tabs">
+      <label for="t-a">A · Copacabana esencial</label>
+      <label for="t-b">B · Historia y fe</label>
+      <label for="t-c">C · Naturaleza suave</label>
+      <label for="t-d">D · Campo y café</label>
+      <label for="t-e">E · Familia y agua</label>
+      <label for="t-f">F · Montaña exigente</label>
+      <label for="t-g">G · Deporte y recreación</label>
+      </div>
+      <div class="rec-paneles">
+      <article class="rec-panel p-a">
+        <h3>Itinerario A: Copacabana esencial</h3>
+        <span class="rec-badge">Medio día</span><span class="rec-badge baja">Exigencia baja</span>
+        <p>Empieza en el Parque Principal, visita la parroquia de la Asunción, recorre la Casa de la Cultura, sube al cementerio mirador y cierra con café o comida local. Ideal para una primera visita.</p>
+      </article>
+      <article class="rec-panel p-b">
+        <h3>Itinerario B: Historia y fe</h3>
+        <span class="rec-badge">Medio día</span><span class="rec-badge baja">Exigencia baja</span>
+        <p>Combina la Asunción, San Juan de la Tasajera y el Santuario de la Santa Cruz, y conversa sobre el título «Fundadora de Pueblos». Verifica horarios de los templos y el estado del sendero.</p>
+      </article>
+      <article class="rec-panel p-c">
+        <h3>Itinerario C: Naturaleza suave</h3>
+        <span class="rec-badge">Medio día</span><span class="rec-badge baja">Exigencia baja</span>
+        <p>Camina el sendero Piedras Blancas, descansa en un tramo permitido y completa la tarde en el centro. Si observas aves, usa guía y no reproduzcas sonidos.</p>
+      </article>
+      <article class="rec-panel p-d">
+        <h3>Itinerario D: Campo y café</h3>
+        <span class="rec-badge">Día completo</span><span class="rec-badge media">Exigencia media</span>
+        <p>Reserva Ecozarzales o una experiencia rural vigente: senderismo, café, aves, gastronomía y conversación con anfitriones. No llegues sin reserva a fincas privadas.</p>
+      </article>
+      <article class="rec-panel p-e">
+        <h3>Itinerario E: Familia y agua</h3>
+        <span class="rec-badge">Día completo</span><span class="rec-badge baja">Exigencia baja</span>
+        <p>Dedica el día a Las Ballenitas y, si queda energía, suma una visita corta al centro. Consulta edades, reglamento, costos y servicios incluidos.</p>
+      </article>
+      <article class="rec-panel p-f">
+        <h3>Itinerario F: Montaña exigente</h3>
+        <span class="rec-badge">Día completo</span><span class="rec-badge alta">Exigencia alta</span>
+        <p>Morrón de la Sierra o un circuito de bosques de Piedras Blancas con guía experimentado. Lleva agua, comida, impermeable, calzado de agarre y protector solar. No lo mezcles con actividades acuáticas.</p>
+      </article>
+      <article class="rec-panel p-g">
+        <h3>Itinerario G: Deporte y recreación</h3>
+        <span class="rec-badge">Medio día</span><span class="rec-badge media">Exigencia media</span>
+        <p>Consulta disponibilidad en Cristo Rey y en las canchas de Las Ballenitas, reserva, practica y cierra con comida local. El acceso no está garantizado.</p>
+      </article>
+      </div>
+
+      <!-- SEGURIDAD -->
+      <h3 class="rec-titulo">Viaja seguro y responsable</h3>
+      <p class="rec-intro">Cinco recordatorios para disfrutar sin riesgos y cuidar el territorio.</p>
+      <div class="rec-seguridad">
+      <details>
+        <summary><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Antes de salir</summary>
+        <p>Confirma el estado de la vía, el clima, los horarios y si el lugar está abierto.</p>
+      </details>
+      <details>
+        <summary><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>En la montaña</summary>
+        <p>No salgas solo, informa tu itinerario, lleva agua y comunicación, usa calzado adecuado y regresa antes de oscurecer.</p>
+      </details>
+      <details>
+        <summary><i class="fa-solid fa-leaf" aria-hidden="true"></i>Cuida el territorio</summary>
+        <p>Permanece en senderos autorizados, no extraigas flora ni fauna, no dejes residuos, no hagas fogatas y no entres a predios privados.</p>
+      </details>
+      <details>
+        <summary><i class="fa-solid fa-wheelchair" aria-hidden="true"></i>Accesibilidad</summary>
+        <p>Pregunta por el ancho y la superficie del sendero, las pendientes, los baños y el acompañamiento. La etiqueta «familiar» no basta.</p>
+      </details>
+      <details>
+        <summary><i class="fa-solid fa-id-badge" aria-hidden="true"></i>Operadores formales</summary>
+        <p>Contrata prestadores formales, pregunta por seguros y revisa el Registro Nacional de Turismo cuando aplique.</p>
+      </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contacto">
+   <div class="footer">
+    <footer>
+     <div class="top">
+      <div class="left">
+       <h2>
+        Contacto
+       </h2>
+       <h1 id="titu">
+        Gracias por estar en nuestra pagina
+       </h1>
+       <button>
+        Sugerencias y comentarios
+       </button>
+      </div>
+      <div class="pie-nosotros">
+       <ul>
+        <li>
+         <h2>
+          Company
+         </h2>
+         <a href="#">
+          programadores
+         </a>
+         <a href="#">
+          Contacto
+         </a>
+        </li>
+       </ul>
+       <ul>
+        <li>
+         <h2>
+          Resources
+         </h2>
+         <a href="#">
+          Ayudo
+         </a>
+         <a href="#">
+          Soporte
+         </a>
+         <a href="#">
+          Instruciones
+         </a>
+         <a href="#">
+          conoce mas
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="bottom">
+      <div class="left">
+       <p>
+        © Aventourcopa 2026. Todos los derechos reservados .
+       </p>
+      </div>
+      <div class="right socials">
+       <a href="#">
+        <i class="fa-brands fa-facebook">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-twitter">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-discord">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa-brands fa-linkedin">
+        </i>
+       </a>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </section>
+ </body>
+</html>
