@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitos y leyendas | Aventourcopa</title>
+  <meta name="description" content="Relatos, leyendas y tradiciones orales de Copacabana, Antioquia: personajes, apariciones, galería, videos y podcast.">
+
+  <!-- La aparición animada solo se activa si el navegador la soporta; sin esto todo se ve normal -->
+  <script>
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.className += ' mit-js';
+    }
+  </script>
+
+  <link href="style.css" rel="stylesheet">
+  <link href="mitos.css" rel="stylesheet">
+  <link href="sesion.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="mit-body">
+
+  <header>
+    <a class="logo" href="index.html">
+      <img alt="Logo" src="imagenes/logo.png">
+      <div class="titulo">
+        <h1>Aventourcopa</h1>
+        <p>Descubre nuevas aventuras</p>
+      </div>
+    </a>
+    <nav>
+    <ul>
+     <li>
+      <a href="index.html">
+       Inicio
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Imágenes
+      </a>
+     </li>
+     <li>
+      <a href="lugares-copacabana.html">
+       Lugares
+      </a>
+     </li>
+     <li>
+      <a class="mit-activo" href="mitos.html">
+       Mitos y leyendas
+      </a>
+     </li>
+     <li>
+      <a href="recomendaciones.html">
+       Recomendaciones
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Asistente IA
+      </a>
+     </li>
+     <li>
+      <a href="#contacto">
+       Contacto
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <a class="btn btn-sesion" href="#"><i class="fa-solid fa-user" aria-hidden="true"></i> Iniciar sesión</a>
+    <div class="botones">
+      <a class="btn eco" href="ecotour.html">EcoTour</a>
+      <a class="btn game" href="#"><i class="fa-solid fa-gamepad"></i> GameTour</a>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       SECCIÓN MITOS Y LEYENDAS
+       Relatos y tradiciones orales de Copacabana (estilos en mitos.css,
+       comportamiento en mitos.js).
+       ===================================================================== -->
+  <section class="mitos-page" id="mitos" aria-label="Mitos y leyendas de Copacabana">
+
+    <!-- luces flotantes ("ánimas") -->
+    <div class="mit-animas" id="mit-animas" aria-hidden="true"></div>
+
+    <!-- ===================== PORTADA ===================== -->
+    <div class="mit-hero">
+      <img src="assets/images/iglesia-copacabana.jpeg" alt="Iglesia principal de Copacabana, Antioquia" class="mit-hero-bg">
+      <div class="mit-hero-scrim"></div>
+      <div class="mit-hero-content">
+        <p class="mit-eyebrow">Historias que se cuentan al calor de la lámpara</p>
+        <h2 class="mit-hero-titulo">Relatos y tradiciones orales <span>de Copacabana</span></h2>
+        <p class="mit-hero-lead">Un archivo vivo de las leyendas, apariciones y personajes que los abuelos de Copacabana,
+          Antioquia, han transmitido de generación en generación: brujas en la carretera vieja, luces que señalan
+          tesoros, y espantos que aún rondan el cementerio.</p>
+        <div class="mit-hero-actions">
+          <a href="#mit-leyendas" class="mit-btn mit-btn-primary">Escuchar las leyendas</a>
+          <a href="#mit-podcast" class="mit-btn mit-btn-ghost">Ir al podcast</a>
+        </div>
+      </div>
+      <div class="mit-hero-moon" aria-hidden="true"></div>
+      <div class="mit-hero-fog" aria-hidden="true"></div>
+      <svg class="mit-hero-mountains" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,160 L120,110 L230,150 L340,90 L460,140 L600,70 L760,150 L900,100 L1040,155 L1180,95 L1300,145 L1440,120 L1440,200 L0,200 Z" fill="#DCCBA7"/>
+        <path d="M0,190 L160,150 L300,185 L470,130 L620,180 L800,140 L980,190 L1160,150 L1300,185 L1440,160 L1440,200 L0,200 Z" fill="#F3E7D3"/>
+      </svg>
+    </div>
+
+    <!-- ===================== SUBÍNDICE ===================== -->
+    <nav class="mit-subnav" aria-label="Índice de Mitos y leyendas">
+      <span class="mit-marca">
+        <svg class="mit-lantern" width="26" height="26" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3 L24 9 H16 Z" fill="currentColor"/>
+            <rect x="14" y="9" width="12" height="4" rx="1" fill="currentColor"/>
+            <path d="M13 13 h14 l-2 18 a5 5 0 0 1 -10 0 z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle class="mit-flame" cx="20" cy="22" r="4.2" fill="currentColor"/>
+            <rect x="15" y="31" width="10" height="3" rx="1" fill="currentColor"/>
+          </svg>
+        <span>Aventourcopa</span>
+      </span>
+      <ul>
+        <li><a href="#mit-leyendas">Leyendas</a></li>
+        <li><a href="#mit-personajes">Personajes</a></li>
+        <li><a href="#mit-galeria">Galería</a></li>
+        <li><a href="#mit-videos">Videos</a></li>
+        <li><a href="#mit-podcast">Podcast</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="mit-section mit-intro mit-reveal" id="mit-introduccion">
+      <div class="mit-wrap mit-intro-grid">
+        <div class="mit-intro-text">
+          <p class="mit-eyebrow">La tradición oral</p>
+          <h2>Contadas junto a la lámpara, guardadas en la memoria</h2>
+          <p class="mit-drop-cap">En Copacabana, Antioquia, muchas historias nunca se escribieron: se contaron. En los patios, en los
+            caminos veredales y alrededor de una lámpara encendida, generaciones enteras han compartido relatos de
+            brujas que vuelan por la carretera vieja a Guarne, niños de túnica blanca que caminan hacia el Morro del
+            Manzanillo, y espantos que persiguen a quien huye cerca del cementerio.</p>
+          <p>Estas historias no son solo para asustar: son identidad. Enseñan a respetar la naturaleza, a cuidar el
+            agua, a no rondar solos de noche y a valorar la memoria de quienes ya no están. Esta página reúne esas
+            voces, sus personajes y los lugares donde —según se cuenta— todavía se aparecen.</p>
+        </div>
+        <figure class="mit-intro-figure" data-lightbox="assets/images/abuelo-contando.jpeg" tabindex="0" role="button"
+          aria-label="Ampliar ilustración: un abuelo cuenta leyendas a los niños junto a una lámpara">
+          <img src="assets/images/abuelo-contando.jpeg" alt="Un abuelo narra leyendas a un grupo de niños junto a una lámpara, rodeado de visiones de brujas, la Llorona, el Mohán y otros personajes">
+          <figcaption><i class="mit-ico-expand"></i> Así se cuentan las leyendas: de voz en voz. Toca para ampliar.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="mit-divider" aria-hidden="true"><svg viewBox="0 0 200 20"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="10" r="4" fill="currentColor"/><path d="M100 4 L103 10 L100 16 L97 10 Z" fill="currentColor" opacity="0.6"/></svg></div>
+
+    <!-- ===================== LEYENDAS ===================== -->
+    <section class="mit-section mit-leyendas mit-reveal" id="mit-leyendas">
+      <div class="mit-wrap">
+        <p class="mit-eyebrow mit-center">Doce relatos que aún se cuentan</p>
+        <h2 class="mit-center">Leyendas y apariciones de Copacabana</h2>
+
+        <!-- Grupo 1: Apariciones -->
+        <div class="mit-grupo-header">
+          <span class="mit-grupo-icon">👻</span>
+          <h3 class="mit-grupo-title">Apariciones que rondan de noche</h3>
+        </div>
+        <div class="mit-leyendas-grid">
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">😱</div>
+            <h3>El Gritón</h3>
+            <p>En la vereda Peñolcito se escuchaba un grito aterrador que parecía acercarse cada vez más. Quienes lo
+              oían huían del miedo.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">🧹</div>
+            <h3>Las Brujas</h3>
+            <p>Se aparecen en los caminos y vuelan por las noches desde la carretera vieja de Guarne hacia la
+              autopista Norte, entre risas y ruidos extraños.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">👦</div>
+            <h3>El Niño Vestido de Blanco</h3>
+            <p>Un niño de túnica blanca, ojos brillantes y una luz en el pecho, era visto caminando hacia el Morro del
+              Manzanillo en la madrugada; luego desaparecía.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">👻</div>
+            <h3>Los Espantos</h3>
+            <p>Cerca del cementerio aparecían "bultos" o espíritus. A quienes los veían les daba mucho frío, no podían
+              hablar, y si huían, el espanto los perseguía.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">🌙</div>
+            <h3>La Llorona</h3>
+            <p>Mujer vestida de blanco que llora por las noches cerca de quebradas y caminos solitarios. Quien la
+              escucha prefiere no acercarse, porque trae mala suerte.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="aparicion">
+            <span class="mit-cat-tag">Aparición</span>
+            <div class="mit-leyenda-icon">🐎</div>
+            <h3>Carretera vieja a Guarne</h3>
+            <p>Relatos de apariciones de personas vestidas de blanco, jinetes fantasma y sombras que se atraviesan en
+              el camino, especialmente en las noches.</p>
+          </article>
+        </div>
+
+        <!-- Grupo 2: Espíritus de la naturaleza -->
+        <div class="mit-grupo-header">
+          <span class="mit-grupo-icon">🌿</span>
+          <h3 class="mit-grupo-title">Espíritus que cuidan el monte y el agua</h3>
+        </div>
+        <div class="mit-leyendas-grid">
+          <article class="mit-leyenda-card" data-cat="naturaleza">
+            <span class="mit-cat-tag">Naturaleza</span>
+            <div class="mit-leyenda-icon">🌊</div>
+            <h3>El Mohán</h3>
+            <p>Hombre de cabello largo que vive en las quebradas. Cuidador del agua, asusta a quienes dañan la
+              naturaleza o se acercan solos.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="naturaleza">
+            <span class="mit-cat-tag">Naturaleza</span>
+            <div class="mit-leyenda-icon">🌲</div>
+            <h3>La Patasola</h3>
+            <p>Aparece en los bosques para desorientar a los viajeros y a quienes entran de noche al monte.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="naturaleza">
+            <span class="mit-cat-tag">Naturaleza</span>
+            <div class="mit-leyenda-icon">🏮</div>
+            <h3>El Duende</h3>
+            <p>Duende travieso que esconde objetos, hace bromas en las casas y silba para atraer a los niños hacia el
+              bosque.</p>
+          </article>
+        </div>
+
+        <!-- Grupo 3: Misterios, luces y tesoros -->
+        <div class="mit-grupo-header">
+          <span class="mit-grupo-icon">✨</span>
+          <h3 class="mit-grupo-title">Lugares de misterio, luces y tesoros</h3>
+        </div>
+        <div class="mit-leyendas-grid">
+          <article class="mit-leyenda-card" data-cat="misterio">
+            <span class="mit-cat-tag">Misterio</span>
+            <div class="mit-leyenda-icon">⛰️</div>
+            <h3>La Cueva de Buches</h3>
+            <p>Cueva ubicada cerca del cementerio, habitada según la tradición por indígenas y rodeada de historias de
+              misterio, brujería y apariciones.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="misterio">
+            <span class="mit-cat-tag">Misterio</span>
+            <div class="mit-leyenda-icon">✨</div>
+            <h3>Luces misteriosas o "Ánimas"</h3>
+            <p>Pequeñas luces que aparecen en la noche. Algunos creen que son almas en pena; otros, que señalan
+              lugares donde hay tesoros enterrados.</p>
+          </article>
+
+          <article class="mit-leyenda-card" data-cat="misterio">
+            <span class="mit-cat-tag">Misterio</span>
+            <div class="mit-leyenda-icon">🏺</div>
+            <h3>Tesoros enterrados</h3>
+            <p>Historias sobre guacas indígenas escondidas en los cerros. Quienes las buscan sin permiso sufren
+              desgracias o nunca encuentran el lugar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="mit-divider" aria-hidden="true"><svg viewBox="0 0 200 20"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="10" r="4" fill="currentColor"/><path d="M100 4 L103 10 L100 16 L97 10 Z" fill="currentColor" opacity="0.6"/></svg></div>
+
+    <!-- ===================== PERSONAJES ===================== -->
+    <section class="mit-section mit-personajes mit-reveal" id="mit-personajes">
+      <div class="mit-wrap">
+        <p class="mit-eyebrow mit-center">Memoria del pueblo</p>
+        <h2 class="mit-center">Personajes tradicionales</h2>
+        <p class="mit-center mit-lead">Historias de personajes recordados por su forma de vivir y por las
+          enseñanzas que dejaron al pueblo.</p>
+
+        <div class="mit-scroll-panel">
+          <div class="mit-scroll-texture" aria-hidden="true"></div>
+          <div class="mit-personajes-grid">
+            <div class="mit-personaje">
+              <div class="mit-personaje-seal" style="--tint:#8a6a3f"><span>DC</span></div>
+              <h4>Doctor Chácaras</h4>
+            </div>
+            <div class="mit-personaje">
+              <div class="mit-personaje-seal" style="--tint:#6c7a4f"><span>HM</span></div>
+              <h4>Hermano Mío</h4>
+            </div>
+            <div class="mit-personaje">
+              <div class="mit-personaje-seal" style="--tint:#a06b3a"><span>T</span></div>
+              <h4>Timoteo</h4>
+            </div>
+            <div class="mit-personaje">
+              <div class="mit-personaje-seal" style="--tint:#5f7d6e"><span>JG</span></div>
+              <h4>José Gondo</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="mit-divider" aria-hidden="true"><svg viewBox="0 0 200 20"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="10" r="4" fill="currentColor"/><path d="M100 4 L103 10 L100 16 L97 10 Z" fill="currentColor" opacity="0.6"/></svg></div>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section class="mit-section mit-galeria mit-reveal" id="mit-galeria">
+      <div class="mit-wrap">
+        <p class="mit-eyebrow mit-center">Imágenes del relato</p>
+        <h2 class="mit-center">Galería</h2>
+        <p class="mit-center mit-lead">Toca cualquier imagen para ampliarla.</p>
+
+        <div class="mit-galeria-grid">
+          <figure class="mit-galeria-item" data-lightbox="assets/images/leyendas-mapa.jpeg" tabindex="0" role="button" aria-label="Ampliar mapa de leyendas de Copacabana">
+            <img src="assets/images/leyendas-mapa.jpeg" alt="Mapa ilustrado con todas las leyendas de Copacabana: el gritón, las brujas, el niño vestido de blanco, los espantos, la llorona, el mohán, la patasola, el duende y más">
+            <figcaption><i class="mit-ico-expand"></i> Mapa de leyendas</figcaption>
+          </figure>
+
+          <figure class="mit-galeria-item" data-lightbox="assets/images/abuelo-contando.jpeg" tabindex="0" role="button" aria-label="Ampliar ilustración de un abuelo contando leyendas">
+            <img src="assets/images/abuelo-contando.jpeg" alt="Un abuelo cuenta leyendas junto a una lámpara a un grupo de niños">
+            <figcaption><i class="mit-ico-expand"></i> Noche de relatos</figcaption>
+          </figure>
+
+          <figure class="mit-galeria-item" data-lightbox="assets/images/iglesia-copacabana.jpeg" tabindex="0" role="button" aria-label="Ampliar fotografía de la iglesia de Copacabana">
+            <img src="assets/images/iglesia-copacabana.jpeg" alt="Fotografía de la iglesia principal de Copacabana, Antioquia">
+            <figcaption><i class="mit-ico-expand"></i> Iglesia de Copacabana</figcaption>
+          </figure>
+
+          <figure class="mit-galeria-item" data-lightbox="assets/images/sellos-copacabana.jpeg" tabindex="0" role="button" aria-label="Ampliar ilustraciones de sellos de Copacabana">
+            <img src="assets/images/sellos-copacabana.jpeg" alt="Tres sellos ilustrados: calle de Copacabana, café de Copa y baile tradicional en la plaza">
+            <figcaption><i class="mit-ico-expand"></i> Copacabana en tres sellos</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <div class="mit-divider" aria-hidden="true"><svg viewBox="0 0 200 20"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="10" r="4" fill="currentColor"/><path d="M100 4 L103 10 L100 16 L97 10 Z" fill="currentColor" opacity="0.6"/></svg></div>
+
+    <!-- ===================== VIDEOS ===================== -->
+    <section class="mit-section mit-videos mit-reveal" id="mit-videos">
+      <div class="mit-wrap">
+        <p class="mit-eyebrow mit-center">Los relatos en movimiento</p>
+        <h2 class="mit-center">Videos</h2>
+        <p class="mit-center mit-lead">Reproduce cada video directamente aquí, o toca el ícono para verlo en pantalla
+          completa.</p>
+
+        <div class="mit-videos-grid">
+          <article class="mit-video-card">
+            <div class="mit-video-frame">
+              <video controls preload="metadata" playsinline poster="assets/images/iglesia-copacabana.jpeg">
+                <source src="assets/videos/relatos-de-copacabana.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+              </video>
+              <button class="mit-expand-btn" data-video-expand="assets/videos/relatos-de-copacabana.mp4" aria-label="Ver en pantalla completa">
+                <i class="mit-ico-expand"></i>
+              </button>
+            </div>
+            <h3>Relatos de Copacabana</h3>
+            <p>Un recorrido narrado por las historias y personajes más recordados del municipio.</p>
+          </article>
+
+          <article class="mit-video-card">
+            <div class="mit-video-frame">
+              <video controls preload="metadata" playsinline poster="assets/images/leyendas-mapa.jpeg">
+                <source src="assets/videos/sombras-de-copacabana.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+              </video>
+              <button class="mit-expand-btn" data-video-expand="assets/videos/sombras-de-copacabana.mp4" aria-label="Ver en pantalla completa">
+                <i class="mit-ico-expand"></i>
+              </button>
+            </div>
+            <h3>Sombras de Copacabana</h3>
+            <p>Las apariciones y espantos que, según la tradición, aún rondan los caminos del pueblo.</p>
+          </article>
+
+          <article class="mit-video-card">
+            <div class="mit-video-frame">
+              <video controls preload="metadata" playsinline poster="assets/images/abuelo-contando.jpeg">
+                <source src="assets/videos/relato-animado.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+              </video>
+              <button class="mit-expand-btn" data-video-expand="assets/videos/relato-animado.mp4" aria-label="Ver en pantalla completa">
+                <i class="mit-ico-expand"></i>
+              </button>
+            </div>
+            <h3>Relato animado</h3>
+            <p>Una pieza corta que recrea, en imagen y voz, una de las leyendas del municipio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="mit-divider" aria-hidden="true"><svg viewBox="0 0 200 20"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="10" r="4" fill="currentColor"/><path d="M100 4 L103 10 L100 16 L97 10 Z" fill="currentColor" opacity="0.6"/></svg></div>
+
+    <!-- ===================== PODCAST ===================== -->
+    <section class="mit-section mit-podcast mit-reveal" id="mit-podcast">
+      <div class="mit-wrap mit-podcast-wrap">
+        <div class="mit-podcast-card">
+          <div class="mit-podcast-icon" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+              <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M19 11a7 7 0 0 1-14 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="mit-eyebrow">Para escuchar</p>
+          <h2>El podcast de los relatos de Copacabana</h2>
+          <p>Un episodio narrado que reúne las leyendas y tradiciones orales del municipio, generado a partir de
+            este mismo archivo de historias. Se abre en una pestaña nueva, alojado en NotebookLM.</p>
+          <a class="mit-btn mit-btn-primary"
+            href="https://notebooklm.google.com/notebook/3e059bcf-b8b7-4b29-a52f-13617c25e55f/artifact/6ce5f6c4-58be-4b46-b979-670a82c693d8?utm_source=nlmm_share"
+            target="_blank" rel="noopener noreferrer">
+            Escuchar el podcast <i class="mit-ico-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  
+    </main>
+
+    <!-- ===================== CIERRE ===================== -->
+    <div class="mit-wrap mit-cierre">
+      <p class="mit-footer-quote">"Tradiciones que pasan de generación en generación y hacen parte de nuestra identidad
+        copacabanense." <span aria-hidden="true">🤎</span></p>
+      <p class="mit-footer-cta">¡Conozcamos, valoremos y preservemos nuestras historias!</p>
+      <p class="mit-footer-credit">© 2025 Aventourcopa — Relatos y tradiciones orales de Copacabana, Antioquia.</p>
+    </div>
+
+  <!-- ===================== LIGHTBOX IMAGEN ===================== -->
+  <div class="mit-lightbox" id="mit-imgLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="mit-lightbox-close" id="mit-imgLightboxClose" aria-label="Cerrar imagen">&times;</button>
+    <img id="mit-imgLightboxImg" src="" alt="">
+  </div>
+
+  <!-- ===================== LIGHTBOX VIDEO ===================== -->
+  <div class="mit-lightbox" id="mit-videoLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="mit-lightbox-close" id="mit-videoLightboxClose" aria-label="Cerrar video">&times;</button>
+    <video id="mit-videoLightboxPlayer" controls playsinline></video>
+  </div>
+
+
+  </section>
+
+  <section id="contacto">
+    <div class="footer">
+      <footer>
+        <div class="top">
+          <div class="left">
+            <h2>Contacto</h2>
+            <h1 id="titu">Gracias por estar en nuestra pagina</h1>
+            <button>Sugerencias y comentarios</button>
+          </div>
+          <div class="pie-nosotros">
+            <ul>
+              <li>
+                <h2>Company</h2>
+                <a href="#">programadores</a>
+                <a href="#">Contacto</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <h2>Resources</h2>
+                <a href="#">Ayudo</a>
+                <a href="#">Soporte</a>
+                <a href="#">Instruciones</a>
+                <a href="#">conoce mas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <p>© Aventourcopa 2026. Todos los derechos reservados .</p>
+          </div>
+          <div class="right socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+
+  <script src="mitos.js"></script>
+</body>
+</html>
