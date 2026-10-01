@@ -1,0 +1,105 @@
+/* =====================================================================
+   SESION.CSS — Complementos del encabezado
+   Archivo nuevo: no modifica style.css. Añade:
+   - el botón resaltado "Iniciar sesión" (entre Contacto y EcoTour)
+   - el estado "activo" del menú
+   - desplazamiento suave (para que Contacto baje con calma hasta el footer)
+   - logo como enlace sin subrayado
+   ===================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* El footer queda bien encuadrado al llegar desde "Contacto" */
+#contacto {
+    scroll-margin-top: 80px;
+}
+
+/* Logo clicable (vuelve al inicio) sin subrayado ni color de enlace */
+header a.logo {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Elemento activo del menú principal */
+nav a.nav-activo {
+    color: #C55A2E;
+}
+
+/* ---------- Botón Iniciar sesión ----------
+   Es un hijo directo del <header>: como el encabezado reparte el espacio
+   entre sus hijos, queda en el punto medio entre el menú (Contacto) y el
+   botón EcoTour. Ámbar dorado vivo para resaltar sobre el
+   degradado oliva/beige del encabezado. */
+
+.btn-sesion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(135deg, #FFC23D, #F28C1E);
+    color: #3B271A;
+
+    border: 2px solid #FFF3D6;
+
+    padding: 10px 20px;
+
+    box-shadow: 0 3px 10px rgba(59, 39, 26, .35);
+
+    animation: sesionLatido 3.2s ease-in-out infinite;
+}
+
+.btn-sesion i {
+    font-size: 14px;
+    color: #3B271A;
+
+    transition: transform .3s ease;
+}
+
+.btn-sesion:hover,
+.btn-sesion:focus-visible {
+    background: #FFFBF3;
+    border-color: #F28C1E;
+    color: #C55A2E;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 16px rgba(59, 39, 26, .42);
+
+    animation: none;
+}
+
+.btn-sesion:hover i,
+.btn-sesion:focus-visible i {
+    transform: scale(1.15);
+    color: #C55A2E;
+}
+
+.btn-sesion:focus-visible {
+    outline: 3px solid #F3E7D3;
+    outline-offset: 3px;
+}
+
+@keyframes sesionLatido {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(59, 39, 26, .35),
+                    0 0 0 0 rgba(255, 194, 61, .75);
+    }
+    50% {
+        box-shadow: 0 3px 10px rgba(59, 39, 26, .35),
+                    0 0 0 9px rgba(255, 194, 61, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn-sesion {
+        animation: none;
+    }
+}
