@@ -186,6 +186,25 @@ nav a:hover {
 
 
 /* ---------------------------------------------------------
+   INICIO DE SESION Y REGISTRO
+   --------------------------------------------------------- */
+   .inciosesion {
+    background: #51452F;
+
+    box-shadow:
+        0 3px 8px rgba(59, 39, 26, .20);
+}
+
+.inciosesion:hover {
+    background: #3B271A;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 14px rgba(59, 39, 26, .30);
+}
+
+/* ---------------------------------------------------------
    ECO TOUR
    --------------------------------------------------------- */
 
@@ -502,7 +521,6 @@ footer {
 
     border-top: 1px solid var(--color-border);
 }
-
 
 .top .left,
 .top .right {
